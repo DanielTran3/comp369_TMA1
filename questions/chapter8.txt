@@ -1,0 +1,59 @@
+1. What is the term given to a small image that is moved around on the screen?
+A. Bitmap 
+B. Sprite 
+C. Fairy 
+D. Mouse cursor
+
+2. Which function draws a sprite?
+A. draw_sprite 
+B. show_sprite 
+C. display_sprite 
+D. blit_sprite
+
+3. What is the term for drawing all but a certain color of pixel from one bitmap to another?
+A. Alpha blending 
+B. Translucency 
+C. Transparency 
+D. Telekinesis
+
+4. Which function draws a scaled sprite?
+A. stretch_sprite 
+B. draw_scaled_sprite 
+C. draw_stretched_sprite 
+D. scale_sprite
+
+5. Which function draws a vertically flipped sprite?
+A. draw_vertical_flip 
+B. draw_sprite_v_flip 
+C. flip_v_sprite 
+D. draw_flipped_sprite
+
+6. Which function draws a rotated sprite?
+A. rotate_angle 
+B. draw_rotated_sprite 
+C. draw_rotation 
+D. rotate_sprite
+
+7. Which function draws a sprite with both rotation and scaling?
+A. draw_sprite_rotation_scaled 
+B. rotate_scaled_sprite 
+C. draw_rotated_scaled_sprite 
+D. scale_rotate_sprite
+
+8. What function draws a pivoted sprite?
+A. draw_pivoted_sprite 
+B. draw_pivot_sprite 
+C. pivot_sprite 
+D. draw_sprite_pivot
+
+9. Which function draws a pivoted sprite with scaling and vertical flip?
+A. pivot_scaled_sprite_v_flip 
+B. pivot_stretch_v_flip_sprite 
+C. draw_scaled_pivoted_flipped_sprite 
+D. scale_pivot_v_flip_sprite
+
+10. Which function draws a sprite with translucency (alpha blending)?
+A. alpha_blend_sprite 
+B. draw_trans_sprite 
+C. draw_alpha 
+D. trans_sprite

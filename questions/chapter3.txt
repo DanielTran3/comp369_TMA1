@@ -1,0 +1,59 @@
+1. What is the term used to describe line-based graphics?
+A. Vector 
+B. Bitmap 
+C. Polygon 
+D. Pixel
+
+2. What does CRT stand for?
+A. Captain Ron Teague 
+B. Corporate Resource Training 
+C. Cathode Ray Tube 
+D. Common Relativistic Torch
+
+3. What describes a function that draws a simple geometric shape, such as a point, line, rectangle, or circle?
+A. putpixel 
+B. Graphics Primitive 
+C. triangle 
+D. polygon
+
+4. How many polygons does the typical 3D accelerator chip process at a time?
+A. 16 
+B. 8 
+C. 1 
+D. 256
+
+5. What is comprised of three small streams of electrons of varying shades of red, green, and blue?
+A. Superstring 
+B. Quantum particle 
+C. Electron gun 
+D. Pixel
+
+6. What function is used to create a custom 24- or 32-bit color?
+A. makecol 
+B. rgb 
+C. color 
+D. truecolor
+
+7. What function is used to draw filled rectangles?
+A. fill_rect 
+B. fillrect 
+C. filledrectangle 
+D. rectfill
+
+8. Which of the following is the correct definition of the circle function?
+A. void circle(BITMAP *bmp, int x, int y, int radius, int color); 
+B. void draw_circle(BITMAP *bmp, int x, int y, int radius);
+C. void circle(BITMAP *bmp, int y, int x, int radius, int color); 
+D. bool circle(BITMAP *bmp, int x, int y, int color);
+
+9. What function draws a set of curves based on a set of four input points stored in an array?
+A. jagged 
+B. draw_curves 
+C. spline
+D. polygon
+
+10. Which text output function draws a formatted string with justification?
+A. textout_justify 
+B. textprintf_right 
+C. textout_centre 
+D. textprintf_justify

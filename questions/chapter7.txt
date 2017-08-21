@@ -1,0 +1,59 @@
+1. What does ‘‘blit’’ stand for?
+A. Blitzkrieg 
+B. Bit-block transfer 
+C. Bit-wise transparency 
+D. Basic logarithmic infrared transmitter
+
+2. What is a DHD?
+A. Dynamic hard drive 
+B. Destructive hyperactivity disorder 
+C. Dial home device 
+D. That wasn’t in the chapter!
+
+3. How many pixels are there in an 800 􏰀 600 screen?
+A. 480,000 
+B. 28,800,000 
+C. 65,538 
+D. 47
+
+4. What is the name of the object used to hold a bitmap in memory?
+A. hold_bitmap 
+B. create_bitmap 
+C. OBJECT 
+D. BITMAP
+
+5. Allegorically speaking, why is it important to destroy bitmaps after you’re done using them?
+A. Because bitmaps are evil and must be destroyed. 
+B. Because Microsoft Windows is the mayor. 
+C. Because the trash will pile up over time. 
+D. Because you can’t reboot your home town.
+
+6. Which Allegro function has the potential to create a black hole if used improperly?
+A. acquire_bitmap 
+B. create_supernova 
+C. do_feedback 
+D. release_bitmap
+
+7. What types of graphics files are supported by Allegro?
+A. PCX, LBM, BMP, and GIF 
+B. BMP, PCX, LBM, and TGA 
+C. GIF, JPG, PNG, and BMP 
+D. TGA, TIF, JPG, and BMP
+
+8. What function is used to draw a scaled bitmap?
+A. draw_scaled_bitmap 
+B. stretch_blit 
+C. scaled_blit 
+D. masked_scaled_blit
+
+9. Why would you want to lock the screen while drawing on it?
+A. If it’s not locked, Allegro will lock and unlock the screen for every draw. 
+B. To prevent anyone else from drawing on your screen. 
+C. To keep the screen from getting away while you’re using it. 
+D. To prevent a feedback loop that could destroy your monitor.
+
+10. What is the name of the game you’ve been developing in this book?
+A. Super Allegro Bros. 
+B. Barbie’s Motorhome Adventure 
+C. Teenage Neutered Midget Poodles 
+D. Tank War

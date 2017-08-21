@@ -1,0 +1,59 @@
+1. What function will convert a normal bitmap in memory into a compressed RLE sprite?
+A. convert_rle_sprite
+B. get_rle_sprite
+C. make_rle_sprite
+D. create_rle_sprite 
+
+2. What function will draw a compressed RLE sprite?
+A. draw_sprite 
+B. copy_rle_sprite 
+C. draw_rle_sprite 
+D. rle_blit
+
+3. What function converts a normal bitmap into a compiled sprite?
+A. convert_compiled_sprite 
+B. make_compiled_sprite 
+C. create_compiled_sprite 
+D. get_compiled_sprite
+
+4. What is the name of the function presented in this chapter for performing bounding-rectangle collision testing?
+A. collided 
+B. collision 
+C. colliding 
+D. test_collision
+
+5. What is the name of the function in the sprite class presented in this chapter that draws a single frame of an animation sequence?
+A. drawanimation 
+B. nextframe 
+C. drawframe 
+D. draw_sprite
+
+6. What is the name of the function that calculates angular velocity for X?
+A. calculatevelocity 
+B. velocityx 
+C. calc_angle_x 
+D. calcAngleMoveX
+
+7. What mathematical function is called on to calculate the angular velocity for Y?
+A. sine 
+B. cosine 
+C. tangent 
+D. arcsine
+
+8. Which function converts a normal sprite into a run-length encoded sprite?
+A. convert_sprite 
+B. get_rle_sprite 
+C. convert_to_rle 
+D. load_rle_sprite
+
+9. Which function draws a compiled sprite to a destination bitmap?
+A. draw_compiled 
+B. draw_comp_sprite 
+C. draw_compiled_sprite 
+D. compiled_sprite
+
+10. What is the easiest (and most efficient) way to detect sprite collisions?
+A. Bounding rectangle intersection 
+B. Pixel comparison 
+C. Bilinear quadratic evaluation 
+D. Union of two spheres

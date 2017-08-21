@@ -1,0 +1,59 @@
+1. What is the name of the function that initializes the Allegro sound system?
+A. install_sound 
+B. init_sound 
+C. initialize_sound_system 
+D. init_snd
+
+2. Which function can you use to play a sound effect in your own games?
+A. start_playback 
+B. play_sound 
+C. play_sample 
+D. digi_snd_play
+
+3. What is the name of the function that specifically loads a RIFF WAV file?
+A. load_riff 
+B. load_wav 
+C. load_wave 
+D. load_riff_wav
+
+4. Which function can be used to change the frequency, volume, panning, and looping properties of a sample?
+A. modify_sample 
+B. change_sample 
+C. alter_sample 
+D. adjust_sample
+
+5. What function would you use to shut down the Allegro sound system?
+A. uninstall_sound 
+B. remove_sound 
+C. close_sound 
+D. close_sound_system
+
+6. Which function provides the ability to change the overall volume of sound output?
+A. set_volume 
+B. change_volume 
+C. fix_volume 
+D. set_vol
+
+7. What is the name of the function used to stop playback of a sample?
+A. stop_playback 
+B. stop_playing 
+C. halt_playback 
+D. stop_sample
+
+8. Within what range must a panning value remain?
+A. –32,768 to 32,767 
+B. 0 to 65,536 
+C. 1to100 
+D. 0to255
+
+9. What parameter should you pass to install_sound to initialize the standard digital sound driver?
+A. SND_AUTODETECT 
+B. SND_AUTODETECT_DIGITAL 
+C. DIGI_AUTODETECT 
+D. DIGI_AUTODETECT_SOUND
+
+10. What is the name of the function that plays a sample through the sound mixer?
+A. start_playback 
+B. play_sample 
+C. play_sample_mix 
+D. start_mix_playback
