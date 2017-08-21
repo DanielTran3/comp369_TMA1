@@ -1,1 +1,22 @@
 1. Chapter 1: Demystifying Game Development
+2. Chapter 2: Getting Started with the Allegro Game Library
+3. Chagper 3: 2D Vector Graphics Programming
+4. Chapter 4: Writing Your First Allegro Game
+5. Chapter 5: Getting Input from the Player
+6. Chapter 6: Mastering the Audible Realm
+7. Chapter 7: Basic Bitmap Handling and Blitting
+8. Chapter 8: Introduction to Sprite Programming
+9. Chapter 9: Sprite Animation
+10. Chapter 10: Advanced Sprite Programming
+11. Chapter 11: Programming the Perfect Game Loop
+12. Chapter 12: Programming Tile-Based Scrolling Backgrounds
+13. Chapter 13: Creating a Game World: Editing Tiles and Levels
+14. Chapter 14: Loading Native Mappy Files
+15. Chapter 15: Vertical Scrolling Arcade Games
+16. Chapter 16: Horizontal Scrolling Platform Games
+17. Chapter 17: The Importance of Game Design
+18. Chapter 18: Using Data files to Store Game Resources
+19. Chapter 19: Playing Movies and Cut Scenes
+20. Chapter 20: Introduction to Artificial Intelligence
+21. Chapter 21: Multi-Threading
+22. Chapter 22: Publishing Your Game
