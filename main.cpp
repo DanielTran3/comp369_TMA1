@@ -1,27 +1,5 @@
 #include "pocketTrivia.h"
 
-using namespace std;
-
-void drawTitle() {
-	// Replace the title with a blit to the screen with a better title
-	textout_centre_ex(screen, font, TITLE, WIDTH / 2, HEIGHT / 2, WHITE, 0);
-	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 2 + 2 * LINE_SPACING, WHITE, 0);
-	while (!key[KEY_SPACE]);
-	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
-}
-
-void displayInstructions() {
-	textout_centre_ex(screen, font, "Instructions", WIDTH / 2, HEIGHT / 4, WHITE, 0);
-	textout_centre_ex(screen, font, "To answer a question,", WIDTH / 2, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, 0);
-	textout_centre_ex(screen, font, "press the numbers 1, 2, 3, or 4 corresponding", WIDTH / 2, HEIGHT / 4 + 3 * LINE_SPACING, WHITE, 0);
-	textout_centre_ex(screen, font, "to the answer you want to submit!", WIDTH / 2, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, 0);
-	
-	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, 0);
-	rest(100);
-	while (!key[KEY_SPACE]);
-	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
-}
-
 int convertKeyPress() {
 	if (key[KEY_1]) { return 1; }
 	else if (key[KEY_2]) { return 2; }
@@ -48,11 +26,43 @@ int convertKeyPress() {
 	else { return -1; }
 }
 
+void highlightKey(std::string line, int xOffset, int newLineSpacing) {
+	char keyToPress[2];
+	strncpy(keyToPress, line.c_str(), 1);
+	textout_ex(screen, font, keyToPress, xOffset, newLineSpacing, LIGHT_GREEN, 0);
+}
+
+void drawTitle() {
+	// Replace the title with a blit to the screen with a better title
+	textout_centre_ex(screen, font, TITLE, WIDTH / 2, HEIGHT / 2, WHITE, 0);
+	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 2 + 2 * LINE_SPACING, WHITE, 0);
+	while (!key[KEY_SPACE]);
+	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
+}
+
+void displayInstructions() {
+	textout_centre_ex(screen, font, "Instructions", WIDTH / 2, HEIGHT / 4, WHITE, 0);
+	textout_centre_ex(screen, font, "To answer a question,", WIDTH / 2, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, 0);
+	textout_centre_ex(screen, font, "press the numbers 1, 2, 3, or 4 corresponding", WIDTH / 2, HEIGHT / 4 + 3 * LINE_SPACING, WHITE, 0);
+	textout_centre_ex(screen, font, "to the answer you want to submit!", WIDTH / 2, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, 0);
+	
+	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, 0);
+	rest(100);
+	while (!key[KEY_SPACE]);
+	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
+}
+
 void chooseQuizType(UserOptions *user) {
-	textout_centre_ex(screen, font, "Choose A Quiz Type", WIDTH / 2, HEIGHT / 4, WHITE, 0);
-	textout_centre_ex(screen, font, "1. Questions From Every Chapter", WIDTH / 2, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, 0);
-	textout_centre_ex(screen, font, "2. Questions From A Unit", WIDTH / 2, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, 0);
-	textout_centre_ex(screen, font, "3. Questions From A Chapter", WIDTH / 2, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, 0);
+	int xOffset = WIDTH / 4;
+	textout_centre_ex(screen, font, "Choose A Quiz Type", 2 * xOffset, HEIGHT / 4, WHITE, 0);
+	textout_ex(screen, font, "1 - Questions From Every Chapter", xOffset, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, 0);
+	textout_ex(screen, font, "1", xOffset, HEIGHT / 4 + 2 * LINE_SPACING, LIGHT_GREEN, 0);
+	textout_ex(screen, font, "2 - Questions From A Unit", xOffset, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, 0);
+	textout_ex(screen, font, "2", xOffset, HEIGHT / 4 + 4 * LINE_SPACING, LIGHT_GREEN, 0);
+	textout_ex(screen, font, "3 - Questions From A Chapter", xOffset, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, 0);
+	textout_ex(screen, font, "3", xOffset, HEIGHT / 4 + 6 * LINE_SPACING, LIGHT_GREEN, 0);
+
+	rest(100);
 	while(1) {
 		if (keypressed()) {
 			int value = convertKeyPress();
@@ -66,22 +76,24 @@ void chooseQuizType(UserOptions *user) {
 }
 
 void chooseUnit(UserOptions *user) {
-	ifstream file(UNITS);
-	string line;
+	std::ifstream file(UNITS);
+	std::string line;
 	int xOffset = 30;
-	int newLineSpacing = 0;
+	int newLineSpacing = HEIGHT / 4;
 	
-	textout_centre_ex(screen, font, "Choose A Unit", WIDTH / 2, HEIGHT / 4 + newLineSpacing, WHITE, 0);
+	textout_centre_ex(screen, font, "Choose A Unit", WIDTH / 2, newLineSpacing, WHITE, 0);
 	newLineSpacing += 2 * LINE_SPACING;
 	
 	if (file.is_open()) {
 		while(!file.eof()) {
 			getline(file, line);
-			textout_ex(screen, font, line.c_str(), xOffset, HEIGHT / 4 + newLineSpacing, WHITE, 0);
+			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
+			highlightKey(line, xOffset, newLineSpacing);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
 	}
 	
+	rest(100);
 	while(1) {
 		if (keypressed()) {
 			int value = convertKeyPress();
@@ -95,8 +107,8 @@ void chooseUnit(UserOptions *user) {
 }
 
 void chooseChapter(UserOptions *user) {
-	ifstream file(CHAPTERS);
-	string line;
+	std::ifstream file(CHAPTERS);
+	std::string line;
 	int xOffset = 30;
 	int newLineSpacing = 0;
 	textout_centre_ex(screen, font, "Choose A Chapter", WIDTH / 2, newLineSpacing, WHITE, 0);
@@ -105,10 +117,12 @@ void chooseChapter(UserOptions *user) {
 		while(!file.eof()) {
 			getline(file, line);
 			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
+			highlightKey(line, xOffset, newLineSpacing);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
 	}
 	
+	rest(100);
 	while(1) {
 		if (keypressed()) {
 			int value = convertKeyPress();
@@ -121,10 +135,45 @@ void chooseChapter(UserOptions *user) {
 	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
 }
 
+void chooseNumberOfQuestions(UserOptions *user) {
+	int xOffset = WIDTH / 4;
+	int newLineSpacing = HEIGHT / 4;
+	textout_centre_ex(screen, font, "Choose The Number of Questions", WIDTH / 2, newLineSpacing, WHITE, 0);
+	newLineSpacing += 2 * LINE_SPACING;
+	textout_ex(screen, font, "1 - 3 Questions", xOffset, newLineSpacing, WHITE, 0);
+	textout_ex(screen, font, "1", xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	newLineSpacing += 2 * LINE_SPACING;
+	textout_ex(screen, font, "2 - 5 Questions", xOffset, newLineSpacing, WHITE, 0);
+	textout_ex(screen, font, "2", xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	newLineSpacing += 2 * LINE_SPACING;
+	textout_ex(screen, font, "3 - 10 Questions", xOffset, newLineSpacing, WHITE, 0);
+	textout_ex(screen, font, "3", xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	
+	rest(100);
+	while(1) {
+		if (keypressed()) {
+			int value = convertKeyPress();
+			if (value >= 1 && value <= 3) {
+				if (value == 1) {
+					user->setNumQuestions(3);
+				}
+				if (value == 2) {
+					user->setNumQuestions(5);
+				}
+				if (value == 3) {
+					user->setNumQuestions(10);
+				}
+				break;
+			}
+		}
+	}
+	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
+}
+
 void readFile(const char *filename) {
-	string line;
+	std::string line;
 	int textPos = 0;
-	ifstream file(filename);
+	std::ifstream file(filename);
 	if (file.is_open()) {
 		getline(file, line);
 		textprintf_ex(screen, font, 0, textPos, WHITE, -1, "Question: %s", line.c_str());
@@ -143,10 +192,11 @@ void randomQuestion(const char *filename) {
 	printf("%i\n", randomQuestionNumber);
 	int randomNumberCounter = 0;
 	
-	string line;
+	std::string line;
 	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
 	int textPos = 0;
-	ifstream file(filename);
+	std::ifstream file;
+	file.open(filename);
 	if (file.is_open()) {
 		while (randomNumberCounter < randomQuestionNumber) {
 			getline(file, line);
@@ -156,19 +206,49 @@ void randomQuestion(const char *filename) {
 		}
 		
 		getline(file, line);
-		string questionString = "Question: " + line;
+		std::string questionString = "Question: " + line;
 		textPos = print_long_text(questionString.c_str(), 0, textPos);
-		printf("HERE");
 		while (!line.empty() && !file.eof()) {
-			printf("In the While");
 			getline(file, line);
 			textPos = print_long_text(line.c_str(), 0, textPos);
 		}
 		file.close();
+		printf("RanomQuestion file closed\n");
 	}
 	else {
 		printf("Error Opening File");
 		allegro_message("Error Opening File");
+	}
+}
+
+void generateMultipleRandomQuestions(UserOptions *user) {
+	int questionNumber = 0;
+	while(questionNumber < user->getNumQuestions()) {
+		printf("Question: %i\n", questionNumber);
+		
+		randomQuestion(user->getListOfChapters().at(0).c_str());
+		rest(100);
+		while(1) {
+			if (keypressed()) {
+				int value = convertKeyPress();
+				if (value >= 1 && value <= 4) {
+					if (value == 1) {
+						
+					}
+					if (value == 2) {
+						
+					}
+					if (value == 3) {
+						
+					}
+					if (value == 4) {
+						
+					}
+					break;
+				}
+			}
+		}
+		questionNumber++;
 	}
 }
 
@@ -179,14 +259,15 @@ int print_long_text(const char *text, int x, int y) {
 	int newLine = 0;
 	
 	if (numberOfCharactersInText < numberOfCharactersOnALine) {
-		textout_ex(screen, font, text, x, y, WHITE, -1);
+		//textout_ex(screen, font, text, x, y, WHITE, -1);
+		textprintf_ex(screen, font, x, y, WHITE, -1, "%s", text);
 		newLine += LINE_SPACING;
 	}
 	else {
 		while(pointer < numberOfCharactersInText) {
 			char tempString[numberOfCharactersOnALine];
 			int numChars = pointer + numberOfCharactersOnALine > numberOfCharactersInText ? numberOfCharactersInText - pointer : numberOfCharactersOnALine;
-			string temp = text;
+			std::string temp = text;
 			temp.copy(tempString, numChars, pointer);
 			tempString[numberOfCharactersOnALine] = '\0';
 			printf("%i: %s\n", numChars, tempString);
@@ -200,7 +281,7 @@ int print_long_text(const char *text, int x, int y) {
 }
 
 int main (void) {
-	string chapter_filenames[NUM_CHAPTERS];
+	std::string chapter_filenames[NUM_CHAPTERS];
 	UserOptions *user = new UserOptions(); 
 	printf("User Options Again: %i %i %i %i %i \n", user->getScore(), user->getQuizType(), user->getNumQuestions(), user->getUnit(), user->getChapter());
 	
@@ -220,20 +301,22 @@ int main (void) {
 	displayInstructions();
 	chooseQuizType(user);
 	if (user->getQuizType() == UNIT) {
-		chooseUnit(user);	
+		chooseUnit(user);
 	}
 
 	if (user->getQuizType() == CHAPTER) {
 		chooseChapter(user);	
 	}
 	
+	chooseNumberOfQuestions(user);
+	
 	printf("User Options Again: %i %i %i %i %i \n", user->getScore(), user->getQuizType(), user->getNumQuestions(), user->getUnit(), user->getChapter());
 	user->setChaptersBasedOnOptions();
 	for (int i = 0; i < user->getListOfChapters().size(); i++) {
 		printf("Out: %s\n", user->getListOfChapters().at(i).c_str());
 	}
-	randomQuestion(user->getListOfChapters().at(0).c_str());
-	printf("Made it out\n");
+	
+	generateMultipleRandomQuestions(user);
 	while(!key[KEY_ESC]) {
 		
 	}

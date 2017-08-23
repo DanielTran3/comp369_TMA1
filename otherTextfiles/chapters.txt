@@ -1,6 +1,6 @@
 1 - Chapter 1: Demystifying Game Development
 2 - Chapter 2: Getting Started with the Allegro Game Library
-3 - Chagper 3: 2D Vector Graphics Programming
+3 - Chapter 3: 2D Vector Graphics Programming
 4 - Chapter 4: Writing Your First Allegro Game
 5 - Chapter 5: Getting Input from the Player
 6 - Chapter 6: Mastering the Audible Realm

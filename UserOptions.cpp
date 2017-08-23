@@ -1,5 +1,4 @@
 #include "UserOptions.h"
-using namespace std;
 
 UserOptions::UserOptions() {
 	_score = 0;
@@ -111,6 +110,6 @@ int UserOptions::getChapter() {
 	return _chapter;
 }
 
-vector<string> UserOptions::getListOfChapters() {
+std::vector<std::string> UserOptions::getListOfChapters() {
 	return _listOfChapters;
 }

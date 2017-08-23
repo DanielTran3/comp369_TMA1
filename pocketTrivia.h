@@ -25,6 +25,7 @@
 
 #define WHITE makecol(255, 255, 255)
 #define BLACK makecol(0, 0, 0)
+#define LIGHT_GREEN makecol(100, 255, 0)
 
 void drawTitle();
 void drawInstructions();
