@@ -99,12 +99,12 @@ void chooseChapter(UserOptions *user) {
 	string line;
 	int xOffset = 30;
 	int newLineSpacing = 0;
-	textout_centre_ex(screen, font, "Choose A Chapter", WIDTH / 2, HEIGHT / 4 + newLineSpacing, WHITE, 0);
+	textout_centre_ex(screen, font, "Choose A Chapter", WIDTH / 2, newLineSpacing, WHITE, 0);
 	newLineSpacing += 2 * LINE_SPACING;
 	if (file.is_open()) {
 		while(!file.eof()) {
 			getline(file, line);
-			textout_ex(screen, font, line.c_str(), xOffset, HEIGHT / 4 + newLineSpacing, WHITE, 0);
+			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
 	}
@@ -158,12 +158,17 @@ void randomQuestion(const char *filename) {
 		getline(file, line);
 		string questionString = "Question: " + line;
 		textPos = print_long_text(questionString.c_str(), 0, textPos);
-
+		printf("HERE");
 		while (!line.empty() && !file.eof()) {
+			printf("In the While");
 			getline(file, line);
 			textPos = print_long_text(line.c_str(), 0, textPos);
 		}
 		file.close();
+	}
+	else {
+		printf("Error Opening File");
+		allegro_message("Error Opening File");
 	}
 }
 

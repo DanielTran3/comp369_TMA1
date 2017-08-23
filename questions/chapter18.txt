@@ -1,0 +1,59 @@
+1. What is the shorthand term for an Allegro datafile?
+A. datafile 
+B. datfile 
+C. datafile 
+D. ADF
+
+2. What compression algorithm does Allegro use for compressed datafiles?
+A. LZSS 
+B. LZH 
+C. ZIP 
+D. RAR
+
+3. What is the command-line program that is used to manage Allegro datafiles?
+A. data.exe 
+B. datafile.exe 
+C. datafile.exe 
+D. dat.exe
+
+4. What is the Allegro datafile object struct called?
+A. DATA_FILE 
+B. DATAFILE 
+C. DAT_FILE 
+D. AL_DATFILE
+
+5. What function is used to load a datafile into memory?
+A. open_data_file 
+B. load_dat 
+C. load_datfile 
+D. load_datafile
+
+6. What is the data type format shortcut string for bitmap files?
+A. BITMAP_IMAGE 
+B. BITMAP 
+C. BMP 
+D. DATA_BITMAP
+
+7. What is the data type constant for wave files, defined by Allegro for use in reading datafiles?
+A. DAT_RIFF_WAV 
+B. DAT_WAVE 
+C. DAT_SAMPLE 
+D. DAT_SOUND
+
+8. What is the dat option to specify the type of file being added to the datafile?
+A. -t <type> 
+B. -a <type> 
+C. -d <type> 
+D. -s <type>
+
+9. What is the dat option to specify the color depth of a bitmap file being added to the datafile?
+A. -c <depth> 
+B. -d <depth> 
+C. -bpp <depth> 
+D. -color <depth>
+
+10. Which function loads an individual object from a datafile?
+A. load_data_object 
+B. load_object_file 
+C. load_datafile 
+D. load_datafile_object

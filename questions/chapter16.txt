@@ -1,0 +1,59 @@
+1. Which term is often used to describe a horizontal-scrolling game with a walking character?
+A. Shooter 
+B. Platform 
+C. RPG 
+D. Walker
+
+2. Whatisthenameofthemap-editingtoolyouhaveusedinthelastseveralchapters?
+A. Mappy 
+B.	Map Editor 
+C. Mapper 
+D. Tile Editor
+
+3. What is the identifier for the Mappy block property representing the background?
+A. BG1 
+B. BACK 
+C. BG 
+D. BGND
+
+4. What is the identifier for the Mappy block property representing the first foreground layer?
+A. FG1 
+B. FORE1 
+C. FG 
+D. LV1
+
+5. Which dialog box allows the editing of tile properties in Mappy?
+A. Tile Properties 
+B. Map Tile Editor
+C. Map Block Editor 
+D. Block Properties
+
+6. Which menu item brings up the Range Alter Block Properties dialog?
+A. Range Alter Block Properties 
+B. Range Edit Blocks
+C. Range Edit Tile Properties
+D. Range Block Edit
+
+7. What is the name of the MappyAL struct that contains information about tile blocks?
+A. BLOCKS 
+B. TILEBLOCK 
+C. BLKSTR 
+D. BLKINFO
+
+8. What MappyAL function returns a pointer to a block specified by the (x,y) parameters?
+A. MapGetBlock 
+B. GetDataBlock 
+C. GetTileAt 
+D. MapGetTile
+
+9. What is the name of the function that draws the map’s background?
+A. MapDrawBG 
+B. DrawBackground 
+C. DrawMapBack 
+D. DrawMapBG
+
+10. Which MappyAL block struct member was used to detect collisions in the sample program?
+A. bl 
+B. br 
+C. tl 
+D. tr

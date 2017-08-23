@@ -1,0 +1,59 @@
+1. Why is it important to use a timer in a game?
+A. To maintain a consistent frame rate 
+B. To include support for interrupts 
+C. To make the program thread-safe 
+D. To delegate code to multiple threads
+
+2. Which Allegro timer function slows down the program using a callback function?
+A. callback_rest 
+B. sleep_callback 
+C. rest 
+D. rest_callback
+
+3. What is the name of the function used to initialize the Allegro timer?
+A. init_timer 
+B. install_timer 
+C. timer_reset 
+D. start_timer
+
+4. What is the name of the function that creates a new interrupt handler?
+A. create_handler 
+B. create_interrupt 
+C. int_callback 
+D. install_int
+
+5. What variable declaration keyword should be used with interrupt variables?
+A. danger 
+B. cautious 
+C. volatile 
+D. corruptible
+
+6. What function must you call during program startup to initialize the timer system?
+A. create_timer 
+B. init_timer
+C. install_timer
+D. make_timer 
+
+7. What is the name of the function that provides a callback function for slowing down the program?
+A. rest_callback 
+B. pause_proc 
+C. wait_func 
+D. sleep_callback
+
+8. Which function should you use to slow down the game, causing the pro- gram to pause for a certain number of millseconds?
+A. wait 
+B. pause 
+C. rest 
+D. sleep
+
+9. What function must you call to prepare a variable for use within an inter- rupt callback routine?
+A. lock_object 
+B. LOCK_VARIABLE 
+C. prepare_variable 
+D. PROTECT_VARIABLE
+
+10. What function must you call to prepare a function for use as an interrupt callback?
+A. lock_object 
+B. PREPARE_FUNCTION 
+C. prepare_routine 
+D. LOCK_FUNCTION
