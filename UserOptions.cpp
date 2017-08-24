@@ -24,8 +24,10 @@ void UserOptions::setChaptersBasedOnOptions() {
 		//_listOfChapters = new string[NUM_CHAPTERS];
 		start = CHAPTER_1;
 		end = CHAPTER_22 + 1;
+		_quizName = "Questions From Every Chapter";
 	}
 	if (_quizType == UNIT) {
+		_quizName = "Questions From A Unit";
 		if (_unit == UNIT_1) {
 			//_listOfChapters = new string[UNIT_1_SIZE];
 			start = CHAPTER_1;
@@ -48,6 +50,7 @@ void UserOptions::setChaptersBasedOnOptions() {
 		}
 	}
 	if (_quizType == CHAPTER) {
+		_quizName = "Questions From A Chapter";
 		//_listOfChapters = new string[1];
 		start = _chapter;
 		end = _chapter + 1;
@@ -108,6 +111,14 @@ void UserOptions::setChapter(int chapter) {
 
 int UserOptions::getChapter() {
 	return _chapter;
+}
+
+void UserOptions::setQuizName(std::string quizName) {
+	_quizName = quizName;
+}
+
+std::string UserOptions::getQuizName() {
+	return _quizName;	
 }
 
 std::vector<std::string> UserOptions::getListOfChapters() {

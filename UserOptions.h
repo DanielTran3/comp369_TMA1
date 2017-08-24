@@ -11,6 +11,7 @@ class UserOptions {
 		int _unit;
 		int _chapter;
 		int _numQuestions;
+		std::string _quizName;
 		std::vector<std::string> _listOfChapters;
 	public:
 		UserOptions();
@@ -34,6 +35,9 @@ class UserOptions {
 		
 		void setNumQuestions(int numQuestions);
 		int getNumQuestions();
+
+		void setQuizName(std::string quizName);
+		std::string getQuizName();
 		
 		std::vector<std::string> getListOfChapters();
 };

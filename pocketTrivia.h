@@ -8,6 +8,7 @@
 #include <allegro.h>
 
 #include "UserOptions.h"
+#include "Sound.h"
 
 #define MODE_WINDOWED GFX_AUTODETECT_WINDOWED
 #define MODE_FULL GFX_AUTODETECT_FULLSCREEN

@@ -26,10 +26,10 @@ int convertKeyPress() {
 	else { return -1; }
 }
 
-void highlightKey(std::string line, int xOffset, int newLineSpacing) {
+void highlightKey(std::string line, int xOffset, int newLineSpacing, int color) {
 	char keyToPress[2];
 	strncpy(keyToPress, line.c_str(), 1);
-	textout_ex(screen, font, keyToPress, xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	textout_ex(screen, font, keyToPress, xOffset, newLineSpacing, color, 0);
 }
 
 void drawTitle() {
@@ -50,6 +50,14 @@ void displayInstructions() {
 	rest(100);
 	while (!key[KEY_SPACE]);
 	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
+}
+
+void displayUserInformation(UserOptions *user) {
+	int xOffset = WIDTH / 2;
+	int yOffset = 5;
+	textprintf_centre_ex(screen, font, xOffset, yOffset, WHITE, -1, "Pocket Trivia | Quiz Type: %s | Score: %i/%i", user->getQuizName().c_str(),
+				  user->getScore(), user->getNumQuestions());
+	hline(screen, 0, yOffset + 10, WIDTH, WHITE);
 }
 
 void chooseQuizType(UserOptions *user) {
@@ -88,7 +96,7 @@ void chooseUnit(UserOptions *user) {
 		while(!file.eof()) {
 			getline(file, line);
 			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
-			highlightKey(line, xOffset, newLineSpacing);
+			highlightKey(line, xOffset, newLineSpacing, LIGHT_GREEN);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
 	}
@@ -117,7 +125,7 @@ void chooseChapter(UserOptions *user) {
 		while(!file.eof()) {
 			getline(file, line);
 			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
-			highlightKey(line, xOffset, newLineSpacing);
+			highlightKey(line, xOffset, newLineSpacing, LIGHT_GREEN);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
 	}
@@ -187,14 +195,14 @@ void readFile(const char *filename) {
 	}
 }
 
-void randomQuestion(const char *filename) {
+void randomQuestion(const char *filename, int &answer) {
 	int randomQuestionNumber = rand() % 10;
 	printf("%i\n", randomQuestionNumber);
 	int randomNumberCounter = 0;
 	
 	std::string line;
 	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
-	int textPos = 0;
+	int textPos = 30;
 	std::ifstream file;
 	file.open(filename);
 	if (file.is_open()) {
@@ -210,10 +218,16 @@ void randomQuestion(const char *filename) {
 		textPos = print_long_text(questionString.c_str(), 0, textPos);
 		while (!line.empty() && !file.eof()) {
 			getline(file, line);
+			//printf("%s", line.c_str());
+			if (line[0] == '*') {
+				line.erase(line.begin());
+				answer = (int) line[0] - 48;
+			}
+			int oldTextPos = textPos;
 			textPos = print_long_text(line.c_str(), 0, textPos);
+			highlightKey(line.c_str(), 0, oldTextPos, LIGHT_GREEN);
 		}
 		file.close();
-		printf("RanomQuestion file closed\n");
 	}
 	else {
 		printf("Error Opening File");
@@ -221,29 +235,35 @@ void randomQuestion(const char *filename) {
 	}
 }
 
-void generateMultipleRandomQuestions(UserOptions *user) {
+void checkAnswer(UserOptions *user, int userAnswer, int answer, Sound *soundEffect) {
+	if (userAnswer == answer) {
+		user->incrementScore();
+		soundEffect->setSoundEffect(CORRECT_SOUND);
+		soundEffect->playSoundEffect();
+		printf("SCORE: %i\n", user->getScore());
+	}
+	else {
+		soundEffect->setSoundEffect(INCORRECT_SOUND);
+		soundEffect->playSoundEffect();
+	}
+}
+
+void generateMultipleRandomQuestions(UserOptions *user, Sound *soundEffect) {
 	int questionNumber = 0;
 	while(questionNumber < user->getNumQuestions()) {
-		printf("Question: %i\n", questionNumber);
-		
-		randomQuestion(user->getListOfChapters().at(0).c_str());
+		int randomChapterIndex = rand() % user->getListOfChapters().size();
+		std::string randomChapter = user->getListOfChapters().at(randomChapterIndex);
+		//printf("Chapter: %s | Question: %i\n", randomChapter.c_str(), questionNumber);		
+		int answer = -1;
+		randomQuestion(randomChapter.c_str(), answer);
+		//printf("ANSWER %i", answer);
+		displayUserInformation(user);
 		rest(100);
 		while(1) {
 			if (keypressed()) {
 				int value = convertKeyPress();
 				if (value >= 1 && value <= 4) {
-					if (value == 1) {
-						
-					}
-					if (value == 2) {
-						
-					}
-					if (value == 3) {
-						
-					}
-					if (value == 4) {
-						
-					}
+					checkAnswer(user, value, answer, soundEffect);
 					break;
 				}
 			}
@@ -261,7 +281,7 @@ int print_long_text(const char *text, int x, int y) {
 	if (numberOfCharactersInText < numberOfCharactersOnALine) {
 		//textout_ex(screen, font, text, x, y, WHITE, -1);
 		textprintf_ex(screen, font, x, y, WHITE, -1, "%s", text);
-		newLine += LINE_SPACING;
+		newLine += 2 * LINE_SPACING;
 	}
 	else {
 		while(pointer < numberOfCharactersInText) {
@@ -270,7 +290,7 @@ int print_long_text(const char *text, int x, int y) {
 			std::string temp = text;
 			temp.copy(tempString, numChars, pointer);
 			tempString[numberOfCharactersOnALine] = '\0';
-			printf("%i: %s\n", numChars, tempString);
+			//sprintf("%i: %s\n", numChars, tempString);
 			textout_ex(screen, font, tempString, x, y + newLine, WHITE, -1);
 			pointer += numberOfCharactersOnALine;
 			newLine += LINE_SPACING;
@@ -285,11 +305,19 @@ int main (void) {
 	UserOptions *user = new UserOptions(); 
 	printf("User Options Again: %i %i %i %i %i \n", user->getScore(), user->getQuizType(), user->getNumQuestions(), user->getUnit(), user->getChapter());
 	
+
 	allegro_init();
 	install_keyboard();
 	install_mouse();
 	install_timer();
 	srand(time(NULL));
+	
+	if (install_sound(DIGI_AUTODETECT, MIDI_NONE, "") != 0) {
+		allegro_message("Error Initializing Sound System");
+		return 1;
+	}
+	
+	Sound *pocketTriviaMusic = new Sound();
 	
 	int ret = set_gfx_mode(MODE_WINDOWED, WIDTH, HEIGHT, 0, 0);
 	if (ret != 0) {
@@ -316,7 +344,7 @@ int main (void) {
 		printf("Out: %s\n", user->getListOfChapters().at(i).c_str());
 	}
 	
-	generateMultipleRandomQuestions(user);
+	generateMultipleRandomQuestions(user, pocketTriviaMusic);
 	while(!key[KEY_ESC]) {
 		
 	}

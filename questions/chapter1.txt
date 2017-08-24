@@ -1,59 +1,59 @@
-1. What programming language is used in this book?
-1. C 
-2. Pascal 
-3. C++ 
-4. Assembly
+What programming language is used in this book?
+*1 - C 
+2 - Pascal 
+3 - C++ 
+4 - Assembly
 
-2. What is the name of the free multi-platform game library used in this book?
-1. Treble 
-2. Staccato 
-3. Allegro 
-4. FreeBSD
+What is the name of the free multi-platform game library used in this book?
+1 - Treble 
+2 - Staccato 
+*3 - Allegro 
+4 - FreeBSD
 
-3. What compiler can you use to compile the programs in this book?
-1. Dev-C++ 
-2. Borland C++Builder 
-3. Microsoft Visual C++ 
-4. All of the above
+What compiler can you use to compile the programs in this book?
+1 - Dev-C++ 
+2 - Borland C++Builder 
+3 - Microsoft Visual C++ 
+*4 - All of the above
 
-4. Which operating system does Allegro support?
-1. Windows 
-2. Linux 
-3. MacOSX 
-4. All of the above
+Which operating system does Allegro support?
+1 - Windows 
+2 - Linux 
+3 - MacOSX 
+*4 - All of the above
 
-5. Which of the following is a popular strategy game for the PC?
-1. Counter-Strike 
-2. Splinter Cell 
-3. Civilization IV 
-4. Advance Wars
+Which of the following is a popular strategy game for the PC?
+1 - Counter-Strike 
+2 - Splinter Cell 
+*3 - Civilization IV 
+4 - Advance Wars
 
-6. What is the most important factor to consider when working on a game?
-1. Graphics
-2. Sound effects 
-3. Gameplay 
-4. Level design
+What is the most important factor to consider when working on a game?
+1 - Graphics
+2 - Sound effects 
+*3 - Gameplay 
+4 - Level design
 
-7. What is the name of the free open-source IDE/compiler included on the CD-ROM?
-1. Visual C++ 
-2. Dev-C++ 
-3. Watcom C++ 
-4. C++Builder
+What is the name of the free open-source IDE/compiler included on the CD-ROM?
+1 - Visual C++ 
+*2 - Dev-C++ 
+3 - Watcom C++ 
+4 - C++Builder
 
-8. What is the name of the most popular game development library in the world?
-1. OpenGL 
-2. DJGPP 
-3. DirectX 
-4. Allegro
+What is the name of the most popular game development library in the world?
+1 - OpenGL 
+2 - DJGPP 
+*3 - DirectX 
+4 - Allegro
 
-9. Which of the following books discusses the gaming culture of the late 1980s and early 1990s with strong emphasis on the exploits of id Software?
-1. Masters of Doom 
-2. The Age of Spiritual Machines 
-3. The Inmates Are Running the Asylum 
-4. SiliconSnakeOil
+Which of the following books discusses the gaming culture of the late 1980s and early 1990s with strong emphasis on the exploits of id Software?
+*1 - Masters of Doom 
+2 - The Age of Spiritual Machines 
+3 - The Inmates Are Running the Asylum 
+4 - SiliconSnakeOil
 
-10. According to the author, which of the following is one of the best games made in the 1980s?
-1. Civilization III 
-2. Counter-Strike 
-3. King's Quest IV: The Perils of Rosella 
-4. Starflight
+According to the author, which of the following is one of the best games made in the 1980s?
+1 - Civilization III 
+2 - Counter-Strike 
+3 - King's Quest IV: The Perils of Rosella 
+*4 - Starflight
