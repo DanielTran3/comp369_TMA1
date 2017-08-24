@@ -29,24 +29,39 @@ int convertKeyPress() {
 void highlightKey(std::string line, int xOffset, int newLineSpacing, int color) {
 	char keyToPress[2];
 	strncpy(keyToPress, line.c_str(), 1);
-	textout_ex(screen, font, keyToPress, xOffset, newLineSpacing, color, 0);
+	textout_ex(screen, font, keyToPress, xOffset, newLineSpacing, color, -1);
+}
+
+void drawImage(const char * filename) {
+	BITMAP *image;
+	image = load_bitmap(filename, NULL);
+	if (!image) {
+		allegro_message("Error Loading %s", filename);
+	}
+	
+	blit(image, screen, 0, 0, 0, 0, WIDTH, HEIGHT);
+	destroy_bitmap(image);
 }
 
 void drawTitle() {
 	// Replace the title with a blit to the screen with a better title
-	textout_centre_ex(screen, font, TITLE, WIDTH / 2, HEIGHT / 2, WHITE, 0);
-	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 2 + 2 * LINE_SPACING, WHITE, 0);
+	textout_centre_ex(screen, font, TITLE, WIDTH / 2, HEIGHT / 2, WHITE, -1);
+	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 2 + 2 * LINE_SPACING, WHITE, -1);
 	while (!key[KEY_SPACE]);
 	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
 }
 
-void displayInstructions() {
-	textout_centre_ex(screen, font, "Instructions", WIDTH / 2, HEIGHT / 4, WHITE, 0);
-	textout_centre_ex(screen, font, "To answer a question,", WIDTH / 2, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, 0);
-	textout_centre_ex(screen, font, "press the numbers 1, 2, 3, or 4 corresponding", WIDTH / 2, HEIGHT / 4 + 3 * LINE_SPACING, WHITE, 0);
-	textout_centre_ex(screen, font, "to the answer you want to submit!", WIDTH / 2, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, 0);
+void drawFinal(UserOptions *user) {
 	
-	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, 0);
+}
+
+void displayInstructions() {
+	textout_centre_ex(screen, font, "Instructions", WIDTH / 2, HEIGHT / 4, WHITE, -1);
+	textout_centre_ex(screen, font, "To answer a question,", WIDTH / 2, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, -1);
+	textout_centre_ex(screen, font, "press the numbers 1, 2, 3, or 4 corresponding", WIDTH / 2, HEIGHT / 4 + 3 * LINE_SPACING, WHITE, -1);
+	textout_centre_ex(screen, font, "to the answer you want to submit!", WIDTH / 2, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, -1);
+	
+	textout_centre_ex(screen, font, "Press Space to Continue", WIDTH / 2, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, -1);
 	rest(100);
 	while (!key[KEY_SPACE]);
 	rectfill(screen, 0, 0, WIDTH, HEIGHT, BLACK);
@@ -62,13 +77,13 @@ void displayUserInformation(UserOptions *user) {
 
 void chooseQuizType(UserOptions *user) {
 	int xOffset = WIDTH / 4;
-	textout_centre_ex(screen, font, "Choose A Quiz Type", 2 * xOffset, HEIGHT / 4, WHITE, 0);
-	textout_ex(screen, font, "1 - Questions From Every Chapter", xOffset, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, 0);
-	textout_ex(screen, font, "1", xOffset, HEIGHT / 4 + 2 * LINE_SPACING, LIGHT_GREEN, 0);
-	textout_ex(screen, font, "2 - Questions From A Unit", xOffset, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, 0);
-	textout_ex(screen, font, "2", xOffset, HEIGHT / 4 + 4 * LINE_SPACING, LIGHT_GREEN, 0);
-	textout_ex(screen, font, "3 - Questions From A Chapter", xOffset, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, 0);
-	textout_ex(screen, font, "3", xOffset, HEIGHT / 4 + 6 * LINE_SPACING, LIGHT_GREEN, 0);
+	textout_centre_ex(screen, font, "Choose A Quiz Type", 2 * xOffset, HEIGHT / 4, WHITE, -1);
+	textout_ex(screen, font, "1 - Questions From Every Chapter", xOffset, HEIGHT / 4 + 2 * LINE_SPACING, WHITE, -1);
+	textout_ex(screen, font, "1", xOffset, HEIGHT / 4 + 2 * LINE_SPACING, LIGHT_GREEN, -1);
+	textout_ex(screen, font, "2 - Questions From A Unit", xOffset, HEIGHT / 4 + 4 * LINE_SPACING, WHITE, -1);
+	textout_ex(screen, font, "2", xOffset, HEIGHT / 4 + 4 * LINE_SPACING, LIGHT_GREEN, -1);
+	textout_ex(screen, font, "3 - Questions From A Chapter", xOffset, HEIGHT / 4 + 6 * LINE_SPACING, WHITE, -1);
+	textout_ex(screen, font, "3", xOffset, HEIGHT / 4 + 6 * LINE_SPACING, LIGHT_GREEN, -1);
 
 	rest(100);
 	while(1) {
@@ -89,13 +104,13 @@ void chooseUnit(UserOptions *user) {
 	int xOffset = 30;
 	int newLineSpacing = HEIGHT / 4;
 	
-	textout_centre_ex(screen, font, "Choose A Unit", WIDTH / 2, newLineSpacing, WHITE, 0);
+	textout_centre_ex(screen, font, "Choose A Unit", WIDTH / 2, newLineSpacing, WHITE, -1);
 	newLineSpacing += 2 * LINE_SPACING;
 	
 	if (file.is_open()) {
 		while(!file.eof()) {
 			getline(file, line);
-			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
+			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, -1);
 			highlightKey(line, xOffset, newLineSpacing, LIGHT_GREEN);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
@@ -119,12 +134,12 @@ void chooseChapter(UserOptions *user) {
 	std::string line;
 	int xOffset = 30;
 	int newLineSpacing = 0;
-	textout_centre_ex(screen, font, "Choose A Chapter", WIDTH / 2, newLineSpacing, WHITE, 0);
+	textout_centre_ex(screen, font, "Choose A Chapter", WIDTH / 2, newLineSpacing, WHITE, -1);
 	newLineSpacing += 2 * LINE_SPACING;
 	if (file.is_open()) {
 		while(!file.eof()) {
 			getline(file, line);
-			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, 0);
+			textout_ex(screen, font, line.c_str(), xOffset, newLineSpacing, WHITE, -1);
 			highlightKey(line, xOffset, newLineSpacing, LIGHT_GREEN);
 			newLineSpacing += 2 * LINE_SPACING;
 		}
@@ -146,16 +161,16 @@ void chooseChapter(UserOptions *user) {
 void chooseNumberOfQuestions(UserOptions *user) {
 	int xOffset = WIDTH / 4;
 	int newLineSpacing = HEIGHT / 4;
-	textout_centre_ex(screen, font, "Choose The Number of Questions", WIDTH / 2, newLineSpacing, WHITE, 0);
+	textout_centre_ex(screen, font, "Choose The Number of Questions", WIDTH / 2, newLineSpacing, WHITE, -1);
 	newLineSpacing += 2 * LINE_SPACING;
-	textout_ex(screen, font, "1 - 3 Questions", xOffset, newLineSpacing, WHITE, 0);
-	textout_ex(screen, font, "1", xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	textout_ex(screen, font, "1 - 3 Questions", xOffset, newLineSpacing, WHITE, -1);
+	textout_ex(screen, font, "1", xOffset, newLineSpacing, LIGHT_GREEN, -1);
 	newLineSpacing += 2 * LINE_SPACING;
-	textout_ex(screen, font, "2 - 5 Questions", xOffset, newLineSpacing, WHITE, 0);
-	textout_ex(screen, font, "2", xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	textout_ex(screen, font, "2 - 5 Questions", xOffset, newLineSpacing, WHITE, -1);
+	textout_ex(screen, font, "2", xOffset, newLineSpacing, LIGHT_GREEN, -1);
 	newLineSpacing += 2 * LINE_SPACING;
-	textout_ex(screen, font, "3 - 10 Questions", xOffset, newLineSpacing, WHITE, 0);
-	textout_ex(screen, font, "3", xOffset, newLineSpacing, LIGHT_GREEN, 0);
+	textout_ex(screen, font, "3 - 1-1 Questions", xOffset, newLineSpacing, WHITE, -1);
+	textout_ex(screen, font, "3", xOffset, newLineSpacing, LIGHT_GREEN, -1);
 	
 	rest(100);
 	while(1) {
@@ -237,14 +252,17 @@ void randomQuestion(const char *filename, int &answer) {
 
 void checkAnswer(UserOptions *user, int userAnswer, int answer, Sound *soundEffect) {
 	if (userAnswer == answer) {
-		user->incrementScore();
-		soundEffect->setSoundEffect(CORRECT_SOUND);
+		user->incrementScore();		soundEffect->setSoundEffect(CORRECT_SOUND);
 		soundEffect->playSoundEffect();
+		//drawImage();
+		rest(100);
 		printf("SCORE: %i\n", user->getScore());
 	}
 	else {
 		soundEffect->setSoundEffect(INCORRECT_SOUND);
 		soundEffect->playSoundEffect();
+		//drawImage();
+		rest(100);
 	}
 }
 
@@ -304,13 +322,20 @@ int main (void) {
 	std::string chapter_filenames[NUM_CHAPTERS];
 	UserOptions *user = new UserOptions(); 
 	printf("User Options Again: %i %i %i %i %i \n", user->getScore(), user->getQuizType(), user->getNumQuestions(), user->getUnit(), user->getChapter());
-	
 
 	allegro_init();
 	install_keyboard();
 	install_mouse();
 	install_timer();
 	srand(time(NULL));
+	
+	int ret = set_gfx_mode(MODE_WINDOWED, WIDTH, HEIGHT, 0, 0);
+	if (ret != 0) {
+		allegro_message(allegro_error);
+		return 0;
+	}
+	
+	drawImage(TITLE_IMAGE);
 	
 	if (install_sound(DIGI_AUTODETECT, MIDI_NONE, "") != 0) {
 		allegro_message("Error Initializing Sound System");
@@ -319,11 +344,6 @@ int main (void) {
 	
 	Sound *pocketTriviaMusic = new Sound();
 	
-	int ret = set_gfx_mode(MODE_WINDOWED, WIDTH, HEIGHT, 0, 0);
-	if (ret != 0) {
-		allegro_message(allegro_error);
-		return 0;
-	}
 	//fillFilenames(chapter_filenames);	
 	drawTitle();
 	displayInstructions();

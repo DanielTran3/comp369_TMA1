@@ -23,6 +23,9 @@
 #define UNITS "otherTextfiles/units.txt"
 #define CHAPTERS "otherTextfiles/chapters.txt"
 #define QUESTIONS "questions/questions.txt"
+#define TITLE_IMAGE "images/background1.pcx"
+#define CORRECT_IMAGE "images/correct_image.pcx"
+#define INCORRECT_IMAGE "images/incorrect_image.pcx"
 
 #define WHITE makecol(255, 255, 255)
 #define BLACK makecol(0, 0, 0)
