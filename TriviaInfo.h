@@ -1,5 +1,10 @@
 #ifndef _TRIVIAINFO_H
 
+#include <string>
+#include <vector>
+
+#define NUM_QUESTIONS 4
+
 #define ALL 1
 #define UNIT 2
 #define CHAPTER 3
@@ -43,5 +48,26 @@
 #define CHAPTER_22 22
 
 #define NUM_CHAPTERS 22
+
+class TriviaInfo {
+	private:
+		std::string _question;
+		std::vector<std::string> _answers;
+	public:
+		TriviaInfo();
+		~TriviaInfo();
+		
+		void addAnswer(std::string answer);
+		void clearQuestion();
+		void clearAnswers();
+		
+		void setQuestion(std::string question);
+		std::string getQuestion();
+		
+		
+		void setAnswer(int index, std::string answer);
+		std::string getAnswer(int index);
+		
+};
 
 #endif

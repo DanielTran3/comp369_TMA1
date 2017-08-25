@@ -1,6 +1,7 @@
 #ifndef _USEROPTIONS_H
 
 #include "TriviaInfo.h"
+
 #include <string>
 #include <vector>
 
