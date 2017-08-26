@@ -1,59 +1,59 @@
-1. Why is it important to use a timer in a game?
-A. To maintain a consistent frame rate 
-B. To include support for interrupts 
-C. To make the program thread-safe 
-D. To delegate code to multiple threads
+Why is it important to use a timer in a game?
+*1 - To maintain a consistent frame rate 
+2 - To include support for interrupts 
+3 - To make the program thread-safe 
+4 - To delegate code to multiple threads
 
-2. Which Allegro timer function slows down the program using a callback function?
-A. callback_rest 
-B. sleep_callback 
-C. rest 
-D. rest_callback
+Which Allegro timer function slows down the program using a callback function?
+1 - callback_rest 
+2 - sleep_callback 
+3 - rest 
+*4 - rest_callback
 
-3. What is the name of the function used to initialize the Allegro timer?
-A. init_timer 
-B. install_timer 
-C. timer_reset 
-D. start_timer
+What is the name of the function used to initialize the Allegro timer?
+1 - init_timer 
+*2 - install_timer 
+3 - timer_reset 
+4 - start_timer
 
-4. What is the name of the function that creates a new interrupt handler?
-A. create_handler 
-B. create_interrupt 
-C. int_callback 
-D. install_int
+What is the name of the function that creates a new interrupt handler?
+1 - create_handler 
+2 - create_interrupt 
+3 - int_callback 
+*4 - install_int
 
-5. What variable declaration keyword should be used with interrupt variables?
-A. danger 
-B. cautious 
-C. volatile 
-D. corruptible
+What variable declaration keyword should be used with interrupt variables?
+1 - danger 
+2 - cautious 
+*3 - volatile 
+4 - corruptible
 
-6. What function must you call during program startup to initialize the timer system?
-A. create_timer 
-B. init_timer
-C. install_timer
-D. make_timer 
+What function must you call during program startup to initialize the timer system?
+1 - create_timer 
+2 - init_timer
+*3 - install_timer
+4 - make_timer 
 
-7. What is the name of the function that provides a callback function for slowing down the program?
-A. rest_callback 
-B. pause_proc 
-C. wait_func 
-D. sleep_callback
+What is the name of the function that provides a callback function for slowing down the program?
+*1 - rest_callback 
+2 - pause_proc 
+3 - wait_func 
+4 - sleep_callback
 
-8. Which function should you use to slow down the game, causing the pro- gram to pause for a certain number of millseconds?
-A. wait 
-B. pause 
-C. rest 
-D. sleep
+Which function should you use to slow down the game, causing the program to pause for a certain number of millseconds?
+1 - wait 
+2 - pause 
+*3 - rest 
+4 - sleep
 
-9. What function must you call to prepare a variable for use within an inter- rupt callback routine?
-A. lock_object 
-B. LOCK_VARIABLE 
-C. prepare_variable 
-D. PROTECT_VARIABLE
+What function must you call to prepare a variable for use within an interrupt callback routine?
+1 - lock_object 
+*2 - LOCK_VARIABLE 
+3 - prepare_variable 
+4 - PROTECT_VARIABLE
 
-10. What function must you call to prepare a function for use as an interrupt callback?
-A. lock_object 
-B. PREPARE_FUNCTION 
-C. prepare_routine 
-D. LOCK_FUNCTION
+What function must you call to prepare a function for use as an interrupt callback?
+1 - lock_object 
+2 - PREPARE_FUNCTION 
+3 - prepare_routine 
+*4 - LOCK_FUNCTION

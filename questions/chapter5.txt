@@ -1,59 +1,59 @@
-1. Which function is used to initialize the keyboard handler?
-A. initialize_keyboard 
-B. install_keyboard 
-C. init_keyboard 
-D. install_keyboard_handler
+Which function is used to initialize the keyboard handler?
+1 - initialize_keyboard 
+*2 - install_keyboard 
+3 - init_keyboard 
+4 - install_keyboard_handler
 
-2. What does ANSI stand for?
-A. American Negligible Situation Imperative 
-B. American Nutritional Studies Institute 
-C. American National Standards Institute 
-D. American National Scuba Institute
+What does ANSI stand for?
+1 - American Negligible Situation Imperative 
+*2 - American Nutritional Studies Institute 
+3 - American National Standards Institute 
+4 - American National Scuba Institute
 
-3. What is the name of the array containing keyboard scan codes?
-A. key 
-B. keyboard 
-C. scancodes 
-D. keys
+What is the name of the array containing keyboard scan codes?
+*1 - key 
+2 - keyboard 
+3 - scancodes 
+4 - keys
 
-4. Where is the real stargate located?
-A. Salt Lake City, Utah 
-B. San Antonio, Texas 
-C. Colorado Springs, Colorado 
-D. Cairo, Egypt
+Where is the real stargate located?
+1 - Salt Lake City, Utah 
+2 - San Antonio, Texas 
+*3 - Colorado Springs, Colorado 
+4 - Cairo, Egypt
 
-5. Which function provides buffered keyboard input?
-A. scankey
-B. getkey 
-C. readkey 
-D. buffered_input
+Which function provides buffered keyboard input?
+1 - scankey
+2 - getkey 
+*3 - readkey 
+4 - buffered_input
 
-6. Which function is used to initialize the mouse handler?
-A. install_mouse 
-B. instantiate_mouse 
-C. initialize_mouse 
-D. ingratiate_mouse
+Which function is used to initialize the mouse handler?
+*1 - install_mouse 
+2 - instantiate_mouse 
+3 - initialize_mouse 
+4 - ingratiate_mouse
 
-7. Which values or functions are used to read the mouse position?
-A. mouse_x and mouse_y 
-B. get_mouse_x and get_mouse_y 
-C. mousex and mousey 
-D. mouse_position_x and mouse_position_y
+Which values or functions are used to read the mouse position?
+*1 - mouse_x and mouse_y 
+2 - get_mouse_x and get_mouse_y 
+3 - mousex and mousey 
+4 - mouse_position_x and mouse_position_y
 
-8. Which function is used to read the mouse x and y mickeys for relative motion?
-A. mickey_mouse 
-B. read_mouse_mickeys 
-C. mouse_mickeys 
-D. get_mouse_mickeys
+Which function is used to read the mouse x and y mickeys for relative motion?
+1 - mickey_mouse 
+2 - read_mouse_mickeys 
+3 - mouse_mickeys 
+*4 - get_mouse_mickeys
 
-9. What is the name of the main JOYSTICK_INFO array?
-A. joysticks 
-B. joy 
-C. sticks 
-D. joystick
+What is the name of the main JOYSTICK_INFO array?
+1 - joysticks 
+*2 - joy 
+3 - sticks 
+4 - joystick
 
-10. Which struct contains joystick button data?
-A. JOYSTICK_BUTTONS 
-B. JOYSTICK_BUTTON 
-C. JOYSTICK_BUTTON_INFO 
-D. JOYSTICK_BUTTON_DATA
+Which struct contains joystick button data?
+1 - JOYSTICK_BUTTONS 
+2 - JOYSTICK_BUTTON 
+*3 - JOYSTICK_BUTTON_INFO 
+4 - JOYSTICK_BUTTON_DATA

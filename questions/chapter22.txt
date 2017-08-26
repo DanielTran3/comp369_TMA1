@@ -1,59 +1,59 @@
-1. What is the first step you must take before attempting to get your game published?
-A. Evaluate the game 
-B. Sell the game 
-C. Test the game 
-D. Release the game
+What is the first step you must take before attempting to get your game published?
+*1 - Evaluate the game 
+2 - Sell the game 
+3 - Test the game 
+4 - Release the game
 
-2. What is the most important question to consider in a game before seeking a publisher?
-A. Is it challenging? 
-B. Is it fun to play?
-C. Is it graphically attractive?
-D. Is it marketable? 
+What is the most important question to consider in a game before seeking a publisher?
+1 - Is it challenging? 
+2 - Is it fun to play?
+*3 - Is it graphically attractive?
+4 - Is it marketable? 
 
-3. What is the second most important aspect of a game?
-A. Graphics 
-B. Sound 
-C. Music 
-D. Input
+What is the second most important aspect of a game?
+1 - Graphics 
+*2 - Sound 
+3 - Music 
+4 - Input
 
-4. What is an important factor of gameplay, in the sense of a beginning, middle, and ending, that must be considered?
-A. Progression 
-B. Goals 
-C. Difficulty 
-D. Continuity
+What is an important factor of gameplay, in the sense of a beginning, middle, and ending, that must be considered?
+1 - Progression 
+2 - Goals 
+3 - Difficulty 
+*4 - Continuity
 
-5. What adjective best describes a best-selling game?
-A. Large 
-B. Complex 
-C. Cute 
-D. Addictive
+What adjective best describes a best-selling game?
+1 - Large 
+2 - Complex 
+3 - Cute 
+*4 - Addictive
 
-6. What is an NDA?
-A. Never Diverge Anonymity 
-B. No Disco Allowed 
-C. Non-Disclosure Agreement 
-D. Non-Discussion Agreement
+What is an NDA?
+1 - Never Diverge Anonymity 
+2 - No Disco Allowed 
+*3 - Non-Disclosure Agreement 
+4 - Non-Discussion Agreement
 
-7. What is a software bug?
-A. An error in the source code 
-B. A mistake in the design 
-C. A digital life form 
-D. A tracking device
+What is a software bug?
+*1 - An error in the source code 
+2 - A mistake in the design 
+3 - A digital life form 
+4 - A tracking device
 
-8. What term describes a significant date in the development process?
-A. Deadline 
-B. Milestone 
-C. Achievement 
-D. Release
+What term describes a significant date in the development process?
+1 - Deadline 
+*2 - Milestone 
+3 - Achievement 
+4 - Release
 
-9. Who created the game Smugglers 2?
-A. Niels Bauer 
-B. Andre ́LaMothe
-C. John Carmack 
-D. Ellie Arroway
+Who created the game Smugglers 2?
+*1 - Niels Bauer 
+2 - Andre ́LaMothe
+3 - John Carmack 
+4 - Ellie Arroway
 
-10. For whom should you create a game for the purpose of entertainment?
-A. Yourself 
-B. Gamers 
-C. Publishers 
-D. Marketers
+For whom should you create a game for the purpose of entertainment?
+*1 - Yourself 
+2 - Gamers 
+3 - Publishers 
+4 - Marketers

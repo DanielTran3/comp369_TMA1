@@ -64,10 +64,8 @@ class TriviaInfo {
 		void setQuestion(std::string question);
 		std::string getQuestion();
 		
-		
 		void setAnswer(int index, std::string answer);
 		std::string getAnswer(int index);
-		
 };
 
 #endif

@@ -1,59 +1,59 @@
-1. Which term is often used to describe a horizontal-scrolling game with a walking character?
-A. Shooter 
-B. Platform 
-C. RPG 
-D. Walker
+Which term is often used to describe a horizontal-scrolling game with a walking character?
+1 - Shooter 
+*2 - Platform 
+3 - RPG 
+4 - Walker
 
-2. Whatisthenameofthemap-editingtoolyouhaveusedinthelastseveralchapters?
-A. Mappy 
-B.	Map Editor 
-C. Mapper 
-D. Tile Editor
+What is the name of the map-editing tool you have used in the last several chapters?
+*1 - Mappy 
+2 -	Map Editor 
+3 - Mapper 
+4 - Tile Editor
 
-3. What is the identifier for the Mappy block property representing the background?
-A. BG1 
-B. BACK 
-C. BG 
-D. BGND
+What is the identifier for the Mappy block property representing the background?
+*1 - BG1 
+2 - BACK 
+3 - BG 
+4 - BGND
 
-4. What is the identifier for the Mappy block property representing the first foreground layer?
-A. FG1 
-B. FORE1 
-C. FG 
-D. LV1
+What is the identifier for the Mappy block property representing the first foreground layer?
+*1 - FG1 
+2 - FORE1 
+3 - FG 
+4 - LV1
 
-5. Which dialog box allows the editing of tile properties in Mappy?
-A. Tile Properties 
-B. Map Tile Editor
-C. Map Block Editor 
-D. Block Properties
+Which dialog box allows the editing of tile properties in Mappy?
+1 - Tile Properties 
+2 - Map Tile Editor
+3 - Map Block Editor 
+*4 - Block Properties
 
-6. Which menu item brings up the Range Alter Block Properties dialog?
-A. Range Alter Block Properties 
-B. Range Edit Blocks
-C. Range Edit Tile Properties
-D. Range Block Edit
+Which menu item brings up the Range Alter Block Properties dialog?
+1 - Range Alter Block Properties 
+*2 - Range Edit Blocks
+3 - Range Edit Tile Properties
+4 - Range Block Edit
 
-7. What is the name of the MappyAL struct that contains information about tile blocks?
-A. BLOCKS 
-B. TILEBLOCK 
-C. BLKSTR 
-D. BLKINFO
+What is the name of the MappyAL struct that contains information about tile blocks?
+1 - BLOCKS 
+2 - TILEBLOCK 
+*3 - BLKSTR 
+4 - BLKINFO
 
-8. What MappyAL function returns a pointer to a block specified by the (x,y) parameters?
-A. MapGetBlock 
-B. GetDataBlock 
-C. GetTileAt 
-D. MapGetTile
+What MappyAL function returns a pointer to a block specified by the (x,y) parameters?
+*1 - MapGetBlock 
+2 - GetDataBlock 
+3 - GetTileAt 
+4 - MapGetTile
 
-9. What is the name of the function that draws the map’s background?
-A. MapDrawBG 
-B. DrawBackground 
-C. DrawMapBack 
-D. DrawMapBG
+What is the name of the function that draws the map’s background?
+*1 - MapDrawBG 
+2 - DrawBackground 
+3 - DrawMapBack 
+4 - DrawMapBG
 
-10. Which MappyAL block struct member was used to detect collisions in the sample program?
-A. bl 
-B. br 
-C. tl 
-D. tr
+Which MappyAL block struct member was used to detect collisions in the sample program?
+1 - bl 
+2 - br 
+*3 - tl 
+4 - tr

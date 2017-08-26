@@ -1,58 +1,59 @@
-1. In which game genre does the vertical shooter belong?
-A. Shoot-em-up 
-B. Platform 
-C. Fighting 
-D. Real-time strategy
+In which game genre does the vertical shooter belong?
+*1 - Shoot-em-up 
+2 - Platform 
+3 - Fighting 
+4 - Real-time strategy
 
-2. What is the name of the support library used as the vertical scroller engine?
-A. ScrollerEngine 
-B. VerticalScroller 
-C. MappyAL 
-D. AllegroScroller
+What is the name of the support library used as the vertical scroller engine?
+1 - ScrollerEngine 
+2 - VerticalScroller 
+*3 - MappyAL 
+4 - AllegroScroller
 
-3. What are the virtual pixel dimensions of the levels in Warbirds Pacifica?
-A. 640 x 480 
-B. 48,000 x 640 
-C. 20 x 1,500 
-D. 640 x 48,000
+What are the virtual pixel dimensions of the levels in Warbirds Pacifica?
+1 - 640 x 480 
+2 - 48,000 x 640 
+3 - 20 x 1,500 
+*4 - 640 x 48,000
 
-4. What is the name of the level-editing program used to create the first level of Warbirds Pacifica?
-A. Happy 
-B. Mappy 
-C. Snappy 
-D. Frappy
+What is the name of the level-editing program used to create the first level of Warbirds Pacifica?
+1 - Happy 
+*2 - Mappy 
+3 - Snappy 
+4 - Frappy
 
-5. How many tiles comprise a level in Warbirds Pacifica?
-A. 30,000 
-B. 1,500 
-C. 48,000
-D. 32,768
+How many tiles comprise a level in Warbirds Pacifica?
+*1 - 30,000 
+2 - 1,500 
+3 - 48,000
+4 - 32,768
 
-6. Which of the following games is a vertical scrolling shooter?
-A. R-Type 
-B. Mars Matrix 
-C. Contra 
-D. Castlevania
+Which of the following games is a vertical scrolling shooter?
+1 - R-Type 
+*2 - Mars Matrix 
+3 - Contra 
+4 - Castlevania
 
-7. Who created the artwork featured in this chapter?
-A. Ray Kurzweil 
-B. Clifford Stoll 
-C. Ari Feldman 
-D. Nicholas Negroponte
+Who created the artwork featured in this chapter?
+1 - Ray Kurzweil 
+2 - Clifford Stoll 
+*3 - Ari Feldman 
+4 - Nicholas Negroponte
 
-8. Which MappyAL function loads a map file? A. LoadMap
-B. MapLoad
-C. LoadMappy
-D. ReadLevel 
+Which MappyAL function loads a map file? 
+1 - LoadMap
+*2 - MapLoad
+3 - LoadMappy
+4 - ReadLevel 
 
-9. Which MappyAL function removes a map from memory?
-A. destroy_map 
-B. free_mappy 
-C. DeleteMap 
-D. MapFreeMem
+Which MappyAL function removes a map from memory?
+1 - destroy_map 
+2 - free_mappy 
+3 - DeleteMap 
+*4 - MapFreeMem
 
-10. Which classic arcade game inspired Warbirds Pacifica?
-A. Pac-Man 
-B. Mars Matrix 
-C. 1942 
-D. StreetFighterII
+Which classic arcade game inspired Warbirds Pacifica?
+1 - Pac-Man 
+2 - Mars Matrix 
+*3 - 1942 
+4 - StreetFighterII

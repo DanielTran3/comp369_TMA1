@@ -1,59 +1,59 @@
-1. What function will convert a normal bitmap in memory into a compressed RLE sprite?
-A. convert_rle_sprite
-B. get_rle_sprite
-C. make_rle_sprite
-D. create_rle_sprite 
+What function will convert a normal bitmap in memory into a compressed RLE sprite?
+1 - convert_rle_sprite
+*2 - get_rle_sprite
+3 - make_rle_sprite
+4 - create_rle_sprite 
 
-2. What function will draw a compressed RLE sprite?
-A. draw_sprite 
-B. copy_rle_sprite 
-C. draw_rle_sprite 
-D. rle_blit
+What function will draw a compressed RLE sprite?
+1 - draw_sprite 
+2 - copy_rle_sprite 
+*3 - draw_rle_sprite 
+4 - rle_blit
 
-3. What function converts a normal bitmap into a compiled sprite?
-A. convert_compiled_sprite 
-B. make_compiled_sprite 
-C. create_compiled_sprite 
-D. get_compiled_sprite
+What function converts a normal bitmap into a compiled sprite?
+1 - convert_compiled_sprite 
+2 - make_compiled_sprite 
+3 - create_compiled_sprite 
+*4 - get_compiled_sprite
 
-4. What is the name of the function presented in this chapter for performing bounding-rectangle collision testing?
-A. collided 
-B. collision 
-C. colliding 
-D. test_collision
+What is the name of the function presented in this chapter for performing bounding-rectangle collision testing?
+*1 - collided 
+2 - collision 
+3 - colliding 
+4 - test_collision
 
-5. What is the name of the function in the sprite class presented in this chapter that draws a single frame of an animation sequence?
-A. drawanimation 
-B. nextframe 
-C. drawframe 
-D. draw_sprite
+What is the name of the function in the sprite class presented in this chapter that draws a single frame of an animation sequence?
+1 - drawanimation 
+2 - nextframe 
+*3 - drawframe 
+4 - draw_sprite
 
-6. What is the name of the function that calculates angular velocity for X?
-A. calculatevelocity 
-B. velocityx 
-C. calc_angle_x 
-D. calcAngleMoveX
+What is the name of the function that calculates angular velocity for X?
+1 - calculatevelocity 
+2 - velocityx 
+3 - calc_angle_x 
+*4 - calcAngleMoveX
 
-7. What mathematical function is called on to calculate the angular velocity for Y?
-A. sine 
-B. cosine 
-C. tangent 
-D. arcsine
+What mathematical function is called on to calculate the angular velocity for Y?
+*1 - sine 
+2 - cosine 
+3 - tangent 
+4 - arcsine
 
-8. Which function converts a normal sprite into a run-length encoded sprite?
-A. convert_sprite 
-B. get_rle_sprite 
-C. convert_to_rle 
-D. load_rle_sprite
+Which function converts a normal sprite into a run-length encoded sprite?
+1 - convert_sprite 
+*2 - get_rle_sprite 
+3 - convert_to_rle 
+4 - load_rle_sprite
 
-9. Which function draws a compiled sprite to a destination bitmap?
-A. draw_compiled 
-B. draw_comp_sprite 
-C. draw_compiled_sprite 
-D. compiled_sprite
+Which function draws a compiled sprite to a destination bitmap?
+1 - draw_compiled 
+2 - draw_comp_sprite 
+*3 - draw_compiled_sprite 
+4 - compiled_sprite
 
-10. What is the easiest (and most efficient) way to detect sprite collisions?
-A. Bounding rectangle intersection 
-B. Pixel comparison 
-C. Bilinear quadratic evaluation 
-D. Union of two spheres
+What is the easiest (and most efficient) way to detect sprite collisions?
+*1 - Bounding rectangle intersection 
+2 - Pixel comparison 
+3 - Bilinear quadratic evaluation 
+4 - Union of two spheres

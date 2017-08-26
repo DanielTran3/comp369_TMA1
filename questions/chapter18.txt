@@ -1,59 +1,59 @@
-1. What is the shorthand term for an Allegro datafile?
-A. datafile 
-B. datfile 
-C. datafile 
-D. ADF
+What is the shorthand term for an Allegro datafile?
+1 - datafile 
+*2 - datfile 
+3 - datafile 
+4 - ADF
 
-2. What compression algorithm does Allegro use for compressed datafiles?
-A. LZSS 
-B. LZH 
-C. ZIP 
-D. RAR
+What compression algorithm does Allegro use for compressed datafiles?
+*1 - LZSS 
+2 - LZH 
+3 - ZIP 
+4 - RAR
 
-3. What is the command-line program that is used to manage Allegro datafiles?
-A. data.exe 
-B. datafile.exe 
-C. datafile.exe 
-D. dat.exe
+What is the command-line program that is used to manage Allegro datafiles?
+1 - data.exe 
+2 - datafile.exe 
+3 - datafile.exe 
+*4 - dat.exe
 
-4. What is the Allegro datafile object struct called?
-A. DATA_FILE 
-B. DATAFILE 
-C. DAT_FILE 
-D. AL_DATFILE
+What is the Allegro datafile object struct called?
+1 - DATA_FILE 
+*2 - DATAFILE 
+3 - DAT_FILE 
+4 - AL_DATFILE
 
-5. What function is used to load a datafile into memory?
-A. open_data_file 
-B. load_dat 
-C. load_datfile 
-D. load_datafile
+What function is used to load a datafile into memory?
+1 - open_data_file 
+2 - load_dat 
+3 - load_datfile 
+*4 - load_datafile
 
-6. What is the data type format shortcut string for bitmap files?
-A. BITMAP_IMAGE 
-B. BITMAP 
-C. BMP 
-D. DATA_BITMAP
+What is the data type format shortcut string for bitmap files?
+1 - BITMAP_IMAGE 
+2 - BITMAP 
+*3 - BMP 
+4 - DATA_BITMAP
 
-7. What is the data type constant for wave files, defined by Allegro for use in reading datafiles?
-A. DAT_RIFF_WAV 
-B. DAT_WAVE 
-C. DAT_SAMPLE 
-D. DAT_SOUND
+What is the data type constant for wave files, defined by Allegro for use in reading datafiles?
+1 - DAT_RIFF_WAV 
+2 - DAT_WAVE 
+*3 - DAT_SAMPLE 
+4 - DAT_SOUND
 
-8. What is the dat option to specify the type of file being added to the datafile?
-A. -t <type> 
-B. -a <type> 
-C. -d <type> 
-D. -s <type>
+What is the dat option to specify the type of file being added to the datafile?
+*1 - -t <type> 
+2 - -a <type> 
+3 - -d <type> 
+4 - -s <type>
 
-9. What is the dat option to specify the color depth of a bitmap file being added to the datafile?
-A. -c <depth> 
-B. -d <depth> 
-C. -bpp <depth> 
-D. -color <depth>
+What is the dat option to specify the color depth of a bitmap file being added to the datafile?
+1 - -c <depth> 
+2 - -d <depth> 
+*3 - -bpp <depth> 
+4 - -color <depth>
 
-10. Which function loads an individual object from a datafile?
-A. load_data_object 
-B. load_object_file 
-C. load_datafile 
-D. load_datafile_object
+Which function loads an individual object from a datafile?
+1 - load_data_object 
+2 - load_object_file 
+3 - load_datafile 
+*4 - load_datafile_object

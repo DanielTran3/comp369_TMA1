@@ -1,59 +1,59 @@
-1. What is the name of the map editor we’ve been using in this chapter?
-A. Tile Editor 
-B. Map Edit 
-C. Mappy 
-D. TestMappy
+What is the name of the map editor we've been using in this chapter?
+1 - Tile Editor 
+2 - Map Edit 
+*3 - Mappy 
+4 - TestMappy
 
-2. What is the name of the function used to load a level/map file?
-A. MapLoad 
-B. LoadLevel 
-C. OpenMap 
-D. ReadLevel
+What is the name of the function used to load a level/map file?
+*1 - MapLoad 
+2 - LoadLevel 
+3 - OpenMap 
+4 - ReadLevel
 
-3. What is the name of the helper library used in this chapter to load game levels/maps?
-A. LevelLib 
-B. MappyAL 
-C. SpriteLib 
-D. MapFile
+What is the name of the helper library used in this chapter to load game levels/maps?
+1 - LevelLib 
+*2 - MappyAL 
+3 - SpriteLib 
+4 - MapFile
 
-4. What function would you use to draw the foreground layer of a map?
-A. DrawForeground 
-B. DrawMapLayer 
-C. DrawLevelFG 
-D. MapDrawFG
+What function would you use to draw the foreground layer of a map?
+1 - DrawForeground 
+2 - DrawMapLayer 
+3 - DrawLevelFG 
+*4 - MapDrawFG
 
-5. What is the name of the global variable containing the width of a tile map that has been loaded?
-A. tilemapwidth 
-B. mapwidth 
-C. tileMapSizeX 
-D. tilewidth
+What is the name of the global variable containing the width of a tile map that has been loaded?
+1 - tilemapwidth 
+*2 - mapwidth 
+3 - tileMapSizeX 
+4 - tilewidth
 
-6. What function is used to draw the background layer of a map?
-A. DrawBG 
-B. MapDrawBG 
-C. DrawBackground 
-D. DrawMapLayer
+What function is used to draw the background layer of a map?
+1 - DrawBG 
+*2 - MapDrawBG 
+3 - DrawBackground 
+4 - DrawMapLayer
 
-7. What function returns the tile number at a specified x,y position on the map?
-A. gettilenumber 
-B. getmaptile 
-C. MapGetBlockID 
-D. mapGetTile
+What function returns the tile number at a specified x,y position on the map?
+1 - gettilenumber 
+2 - getmaptile 
+*3 - MapGetBlockID 
+4 - mapGetTile
 
-8. What is the name of the global variable containing the height value of tiles contained in the map file that has been loaded?
-A. maptilesize 
-B. tileheight 
-C. mapblockheight 
-D. blocksize
+What is the name of the global variable containing the height value of tiles contained in the map file that has been loaded?
+1 - maptilesize 
+2 - tileheight 
+*3 - mapblockheight 
+4 - blocksize
 
-9. What function should you call before ending the program to free the memory used by map data?
-A. MapFreeMem 
-B. freemapdata 
-C. deleteMap 
-D. clearMapData
+What function should you call before ending the program to free the memory used by map data?
+*1 - MapFreeMem 
+2 - freemapdata 
+3 - deleteMap 
+4 - clearMapData
 
-10. Which MappyAL library function loads a Mappy file?
-A. MapLoad 
-B. LoadMap 
-C. MappyLoad 
-D. OpenMap
+Which MappyAL library function loads a Mappy file?
+*1 - MapLoad 
+2 - LoadMap 
+3 - MappyLoad 
+4 - OpenMap

@@ -1,59 +1,59 @@
-1. What does ‘‘blit’’ stand for?
-A. Blitzkrieg 
-B. Bit-block transfer 
-C. Bit-wise transparency 
-D. Basic logarithmic infrared transmitter
+What does ''blit'' stand for?
+1 - Blitzkrieg 
+*2 - Bit-block transfer 
+3 - Bit-wise transparency 
+4 - Basic logarithmic infrared transmitter
 
-2. What is a DHD?
-A. Dynamic hard drive 
-B. Destructive hyperactivity disorder 
-C. Dial home device 
-D. That wasn’t in the chapter!
+What is a DHD?
+1 - Dynamic hard drive 
+2 - Destructive hyperactivity disorder 
+*3 - Dial home device 
+4 - That wasn’t in the chapter!
 
-3. How many pixels are there in an 800 􏰀 600 screen?
-A. 480,000 
-B. 28,800,000 
-C. 65,538 
-D. 47
+How many pixels are there in an 800 x 600 screen?
+*1 - 480,000 
+2 - 28,800,000 
+3 - 65,538 
+4 - 47
 
-4. What is the name of the object used to hold a bitmap in memory?
-A. hold_bitmap 
-B. create_bitmap 
-C. OBJECT 
-D. BITMAP
+What is the name of the object used to hold a bitmap in memory?
+1 - hold_bitmap 
+2 - create_bitmap 
+3 - OBJECT 
+*4 - BITMAP
 
-5. Allegorically speaking, why is it important to destroy bitmaps after you’re done using them?
-A. Because bitmaps are evil and must be destroyed. 
-B. Because Microsoft Windows is the mayor. 
-C. Because the trash will pile up over time. 
-D. Because you can’t reboot your home town.
+Allegorically speaking, why is it important to destroy bitmaps after you’re done using them?
+1 - Because bitmaps are evil and must be destroyed.
+2 - Because Microsoft Windows is the mayor. 
+*3 - Because the trash will pile up over time. 
+4 - Because you can’t reboot your home town.
 
-6. Which Allegro function has the potential to create a black hole if used improperly?
-A. acquire_bitmap 
-B. create_supernova 
-C. do_feedback 
-D. release_bitmap
+Which Allegro function has the potential to create a black hole if used improperly?
+*1 - acquire_bitmap 
+2 - create_supernova 
+3 - do_feedback 
+4 - release_bitmap
 
-7. What types of graphics files are supported by Allegro?
-A. PCX, LBM, BMP, and GIF 
-B. BMP, PCX, LBM, and TGA 
-C. GIF, JPG, PNG, and BMP 
-D. TGA, TIF, JPG, and BMP
+What types of graphics files are supported by Allegro?
+1 - PCX, LBM, BMP, and GIF 
+*2 - BMP, PCX, LBM, and TGA 
+3 - GIF, JPG, PNG, and BMP 
+4 - TGA, TIF, JPG, and BMP
 
-8. What function is used to draw a scaled bitmap?
-A. draw_scaled_bitmap 
-B. stretch_blit 
-C. scaled_blit 
-D. masked_scaled_blit
+What function is used to draw a scaled bitmap?
+1 - draw_scaled_bitmap 
+*2 - stretch_blit 
+3 - scaled_blit 
+4 - masked_scaled_blit
 
-9. Why would you want to lock the screen while drawing on it?
-A. If it’s not locked, Allegro will lock and unlock the screen for every draw. 
-B. To prevent anyone else from drawing on your screen. 
-C. To keep the screen from getting away while you’re using it. 
-D. To prevent a feedback loop that could destroy your monitor.
+Why would you want to lock the screen while drawing on it?
+*1 - If it’s not locked, Allegro will lock and unlock the screen for every draw. 
+2 - To prevent anyone else from drawing on your screen. 
+3 - To keep the screen from getting away while you’re using it. 
+4 - To prevent a feedback loop that could destroy your monitor.
 
-10. What is the name of the game you’ve been developing in this book?
-A. Super Allegro Bros. 
-B. Barbie’s Motorhome Adventure 
-C. Teenage Neutered Midget Poodles 
-D. Tank War
+What is the name of the game you’ve been developing in this book?
+1 - Super Allegro Bros. 
+2 - Barbie’s Motorhome Adventure 
+3 - Teenage Neutered Midget Poodles 
+*4 - Tank War

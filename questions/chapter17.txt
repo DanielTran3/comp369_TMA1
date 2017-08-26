@@ -1,59 +1,59 @@
-1. What is the best way to get started creating a new game?
-A. Write the source code for a prototype
-B. Create a game design document
-C. Hire the cast and crew
-D. Play other games to engender some inspiration 
+What is the best way to get started creating a new game?
+1 - Write the source code for a prototype
+2 - Create a game design document
+3 - Hire the cast and crew
+*4 - Play other games to engender some inspiration 
 
-2. What types of games are full of creativity and interesting technology that PC gamers often fail to notice?
-A. Console games 
-B. Arcade games
-C. PC games 
-D. Board games
+What types of games are full of creativity and interesting technology that PC gamers often fail to notice?
+*1 - Console games 
+2 - Arcade games
+3 - PC games 
+4 - Board games
 
-3. What phrase best describes the additional features and extras in a game?
-A. Bonus levels 
-B. Easter eggs 
-C. Bells and whistles 
-D. Updates and patches
+What phrase best describes the additional features and extras in a game?
+1 - Bonus levels 
+2 - Easter eggs 
+*3 - Bells and whistles 
+4 - Updates and patches
 
-4. What is usually the most complicated core component of a game, also called the graphics renderer?
-A. The DirectX library 
-B. The Allegro library 
-C. The double-buffer 
-D. The game engine
+What is usually the most complicated core component of a game, also called the graphics renderer?
+1 - The DirectX library 
+2 - The Allegro library 
+3 - The double-buffer 
+*4 - The game engine
 
-5. What is the name of an initial demonstration of a game that presents the basic gameplay elements before the actual game has been completed?
-A. Beta 
-B. Prototype 
-C. Demo 
-D. Release
+What is the name of an initial demonstration of a game that presents the basic gameplay elements before the actual game has been completed?
+1 - Beta 
+*2 - Prototype 
+3 - Demo 
+4 - Release
 
-6. What is the name of the document that contains the blueprints for a game?
-A. Game document 
-B. Blueprint document 
-C. Design document 
-D. Construction document
+What is the name of the document that contains the blueprints for a game?
+1 - Game document 
+2 - Blueprint document 
+*3 - Design document 
+4 - Construction document
 
-7. What are the two types of game designs presented in this chapter?
-A. Mini and complete 
-B. Partial and full 
-C. Prototype and final 
-D. Typical and sarcastic
+What are the two types of game designs presented in this chapter?
+*1 - Mini and complete 
+2 - Partial and full 
+3 - Prototype and final 
+4 - Typical and sarcastic
 
-8. What does NPC stand for?
-A. Non-Pertinent Character 
-B. Non-Practical Condition 
-C. Non-Perfect Caricature 
-D. Non-Player Character
+What does NPC stand for?
+1 - Non-Pertinent Character 
+2 - Non-Practical Condition 
+3 - Non-Perfect Caricature 
+*4 - Non-Player Character
 
-9. What are the chances of a newcomer finding a job as a full-time game programmer or designer?
-A. Guaranteed 
-B. Pretty good 
-C. Questionable 
-D. Negligible
+What are the chances of a newcomer finding a job as a full-time game programmer or designer?
+1 - Guaranteed 
+2 - Pretty good 
+3 - Questionable 
+*4 - Negligible
 
-10. What is the most important aspect of game development?
-A. Design 
-B. Artwork 
-C. Programming 
-D. Implementation
+What is the most important aspect of game development?
+*1 - Design 
+2 - Artwork 
+3 - Programming 
+4 - Implementation

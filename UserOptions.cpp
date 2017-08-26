@@ -1,5 +1,6 @@
 #include "UserOptions.h"
 
+// Intialize the user's options upon creation
 UserOptions::UserOptions() {
 	_score = 0;
 	_quizType = 0;
@@ -9,49 +10,51 @@ UserOptions::UserOptions() {
 }
 
 UserOptions::~UserOptions() {
-	//delete[] _listOfChapters;
+
 }
 
+// Increment the score
 void UserOptions::incrementScore() {
 	_score++;
 }
 
-
+// Method to get a list of chapters that questions will be pulled from based on what the user has inputted
 void UserOptions::setChaptersBasedOnOptions() {
 	int start = 0;
 	int end = 0;
+	
+	// If the user selected "Questions From Every Chapter", then get a list of all chapters
 	if (_quizType == ALL) {
-		//_listOfChapters = new string[NUM_CHAPTERS];
 		start = CHAPTER_1;
 		end = CHAPTER_22 + 1;
 		_quizName = "Questions From Every Chapter";
 	}
+	
+	// If the user selected "Questions From A Unit", then get a list of chapters based on the
+	// unit the user selected
 	if (_quizType == UNIT) {
 		_quizName = "Questions From A Unit";
 		if (_unit == UNIT_1) {
-			//_listOfChapters = new string[UNIT_1_SIZE];
 			start = CHAPTER_1;
 			end = UNIT_1_LAST + 1;
 		}
 		if (_unit == UNIT_2) {
-			//_listOfChapters = new string[UNIT_2_SIZE];			
 			start = UNIT_1_LAST + 1;
 			end = UNIT_2_LAST + 1;
 		}
 		if (_unit == UNIT_3) {
-			//_listOfChapters = new string[UNIT_3_SIZE];
 			start = UNIT_2_LAST + 1;
 			end = UNIT_3_LAST + 1;
 		}
 		if (_unit == UNIT_4) {
-			//_listOfChapters = new string[UNIT_4_SIZE];
 			start = UNIT_3_LAST + 1;
 			end = UNIT_4_LAST + 1;
 		}
 	}
+
+	// If the user selected "Questions From A Chapter", then get the chapter that the user selected
 	if (_quizType == CHAPTER) {
 		_quizName = "Questions From A Chapter";
-		//_listOfChapters = new string[1];
 		start = _chapter;
 		end = _chapter + 1;
 	}
@@ -59,6 +62,7 @@ void UserOptions::setChaptersBasedOnOptions() {
 	fillFilenames(start, end);
 }
 
+// Method to get store the list of chapters into the UserOptions list
 void UserOptions::fillFilenames(int start, int end) {
 	_listOfChapters.clear();
 	char tempString[30];
@@ -66,13 +70,12 @@ void UserOptions::fillFilenames(int start, int end) {
 	int chapterNum = start;
 	for (int i = 0; i < diff; i++) {
 		snprintf(tempString, sizeof(tempString), "%s%d%s", "questions/chapter", chapterNum, ".txt");
-		//filenameList[i - 1] = tempString;
 		_listOfChapters.push_back(tempString);
-		printf("In: %s\n", _listOfChapters.at(i).c_str());
 		chapterNum++;
 	}
 }
 
+// Getters and setters for UserOptions properties
 void UserOptions::setScore(int score) {
 	_score = score;
 }

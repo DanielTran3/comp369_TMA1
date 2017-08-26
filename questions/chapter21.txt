@@ -1,59 +1,59 @@
-1. What library did we use in this chapter to work with multi-threading?
-A. AllegroThreads 
-B. pthread 
-C. allegThreads 
-D. BerkeleyThreads
+What library did we use in this chapter to work with multi-threading?
+1 - AllegroThreads 
+*2 - pthread 
+3 - allegThreads 
+4 - BerkeleyThreads
 
-2. Which company maintains the multi-threading library for Windows sys- tems used in this chapter?
-A. Red Hat 
-B. Microsoft 
-C. Sears 
-D. Borland
+Which company maintains the multi-threading library for Windows systems used in this chapter?
+*1 - Red Hat 
+2 - Microsoft 
+3 - Sears 
+4 - Borland
 
-3. Which function will terminate a thread?
-A. threadkill 
-B. unloadthread 
-C. pthread_exit 
-D. threadTerminate
+Which function will terminate a thread?
+1 - threadkill 
+2 - unloadthread 
+*3 - pthread_exit 
+4 - threadTerminate
 
-4. What type of parameter does a thread callback function require?
-A. int thread_id 
-B. void *data 
-C. THREAD *thread_data 
-D. thread *data
+What type of parameter does a thread callback function require?
+1 - int thread_id 
+*2 - void *data 
+3 - THREAD *thread_data 
+4 - thread *data
 
-5. What is the most common method of keeping a thread running inside a thread callback function?
-A. thread callback 
-B. mutex 
-C. thread function 
-D. while loop
+What is the most common method of keeping a thread running inside a thread callback function?
+1 - thread callback 
+2 - mutex 
+3 - thread function 
+*4 - while loop
 
-6. What is a process that runs within the memory space of a single program but is executed separately from that program?
-A. mutex 
-B. process 
-C. thread 
-D. interrupt
+What is a process that runs within the memory space of a single program but is executed separately from that program?
+1 - mutex 
+2 - process 
+*3 - thread 
+4 - interrupt
 
-7. What helps protect data by locking it inside a single thread, preventing that data from being used by another thread until it is unlocked?
-A. mutex 
-B. process 
-C. thread 
-D. interrupt
+What helps protect data by locking it inside a single thread, preventing that data from being used by another thread until it is unlocked?
+*1 - mutex 
+2 - process 
+3 - thread 
+4 - interrupt
 
-8. What does pthread stand for?
-A. Protected Thread
-B. Public Thread
-C. POSIX Thread 
-D. Purple Thread
+What does pthread stand for?
+1 - Protected Thread
+2 - Public Thread
+*3 - POSIX Thread 
+4 - Purple Thread
 
-9. What is the name of the function used to create a new thread?
-A. create_posix_thread 
-B. pthread_create 
-C. install_thread 
-D. thread_callback
+What is the name of the function used to create a new thread?
+1 - create_posix_thread 
+*2 - pthread_create 
+3 - install_thread 
+4 - thread_callback
 
-10. What is the name of the function that locks a mutex?
-A. lock_pthread_mutex 
-B. lock_mutex 
-C. pthread_lock_mutex 
-D. pthread_mutex_lock
+What is the name of the function that locks a mutex?
+1 - lock_pthread_mutex 
+2 - lock_mutex 
+3 - pthread_lock_mutex 
+*4 - pthread_mutex_lock

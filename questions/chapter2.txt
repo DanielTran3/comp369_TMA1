@@ -1,59 +1,59 @@
-1. What version of Allegro are we using here?
-A. 1.0 
-B. 2.4 
-C. 4.2 
-D. 5.3
+What version of Allegro are we using here?
+1 - 1.0 
+2 - 2.4 
+*3 - 4.2 
+4 - 5.3
 
-2. GNU is an acronym for which of the following phrases?
-A. GNU is Not UNIX 
-B. Great Northern University 
-C. Central Processing Unit 
-D. None of the above
+GNU is an acronym for which of the following phrases?
+*1 - GNU is Not UNIX 
+2 - Great Northern University 
+3 - Central Processing Unit 
+4 - None of the above
 
-3. What is the primary website for Dev-C++?
-A. http://www.microsoft.com 
-B. http://www.bloodshed.net 
-C. http://www.borland.com 
-D. http://www.fsf.org
+What is the primary website for Dev-C++?
+1 - http://www.microsoft.com 
+*2 - http://www.bloodshed.net 
+3 - http://www.borland.com 
+4 - http://www.fsf.org
 
-4. What is the name of the compiler used by Dev-Pascal?
-A. GNU Pascal 
-B. Turbo Pascal 
-C. Object Pascal 
-D. Microsoft Pascal
+What is the name of the compiler used by Dev-Pascal?
+*1 - GNU Pascal 
+2 - Turbo Pascal 
+3 - Object Pascal 
+4 - Microsoft Pascal
 
-5. What version of Dev-C++ are we using in this book?
-A. 3.0 
-B. 4.0 
-C. 5.0 
-D. 6.0
+What version of Dev-C++ are we using in this book?
+1 - 3.0 
+2 - 4.0 
+*3 - 5.0 
+4 - 6.0
 
-6. Which version of Visual C++ are we focusing primarily on in this book?
-A. 6.0 
-B. 7.0 (2002) 
-C. 7.1 (2003) 
-D. 8.0 (2005)
+Which version of Visual C++ are we focusing primarily on in this book?
+1 - 6.0 
+2 - 7.0 (2002) 
+*3 - 7.1 (2003) 
+4 - 8.0 (2005)
 
-7. What distinctive feature of Dev-C++ sets it apart from commercial development tools?
-A. Dev-C++ is open-source 
-B. Dev-C++ is free 
-C. Dev-C++ is multi-platform 
-D. All of the above
+What distinctive feature of Dev-C++ sets it apart from commercial development tools?
+1 - Dev-C++ is open-source 
+2 - Dev-C++ is free 
+3 - Dev-C++ is multi-platform 
+*4 - All of the above
 
-8. What is the name of the game programming library featured in this chapter?
-A. DirectX 
-B. Gnome 
-C. GTK+ 
-D. Allegro
+What is the name of the game programming library featured in this chapter?
+1 - DirectX 
+2 - Gnome 
+3 - GTK+ 
+*4 - Allegro
 
-9. What function must be called before you use the Allegro library?
-A. main() 
-B. byte_me() 
-C. allegro_init() 
-D. lets_get_started()
+What function must be called before you use the Allegro library?
+1 - main() 
+2 - byte_me() 
+*3 - allegro_init() 
+4 - lets_get_started()
 
-10. What statement must be included at the end of main() in an Allegro program?
-A. END_OF_THE_WORLD() 
-B. END_OF_MAIN() 
-C. END_OF_FREEDOM() 
-D. AH_DONUTS()
+1What statement must be included at the end of main() in an Allegro program?
+1 - END_OF_THE_WORLD() 
+*2 - END_OF_MAIN() 
+3 - END_OF_FREEDOM() 
+4 - AH_DONUTS()
