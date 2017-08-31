@@ -352,9 +352,9 @@ void randomQuestion(const char *filename, int &answer, int questionNumber, Trivi
 */
 void checkAnswer(UserOptions *user, int userAnswer, int answer, Sound *soundEffect, TriviaInfo *triviaInfo) {
 	int xOffset = 0;
-	int yOffset = 409;
+	int yOffset = 370;
 
-	rectfill(screen, xOffset, yOffset, WIDTH - 1, yOffset + 7* LINE_SPACING, BLACK);
+	rectfill(screen, xOffset, yOffset, WIDTH - 1, yOffset + 10.8 * LINE_SPACING, BLACK);
 	
 	// User's answer is correct
 	if (userAnswer == answer) {
@@ -368,7 +368,7 @@ void checkAnswer(UserOptions *user, int userAnswer, int answer, Sound *soundEffe
 		drawImage(CORRECT_IMAGE);
 		
 		// Draw a green border around the results box
-		rect(screen, xOffset, yOffset, WIDTH - 1, yOffset + 7* LINE_SPACING, LIGHT_GREEN);
+		rect(screen, xOffset, yOffset, WIDTH - 1, yOffset + 10.8 * LINE_SPACING, LIGHT_GREEN);
 	}
 	else {
 		// Play a sound effecto for an incorrect answer
@@ -378,7 +378,7 @@ void checkAnswer(UserOptions *user, int userAnswer, int answer, Sound *soundEffe
 		drawImage(INCORRECT_IMAGE);
 		
 		// Draw a red border around the results box
-		rect(screen, xOffset, yOffset, WIDTH - 1, yOffset + 7* LINE_SPACING, RED);
+		rect(screen, xOffset, yOffset, WIDTH - 1, yOffset + 10.8 * LINE_SPACING, RED);
 	}
 	xOffset += 1;
 	yOffset += 5;
@@ -560,6 +560,8 @@ int main (void) {
 		
 		user->setChaptersBasedOnOptions();
 		
+		rest(100);
+		
 		generateMultipleRandomQuestions(user, pocketTriviaMusic, triviaInfo);
 		drawFinal(user);
 		
@@ -568,14 +570,19 @@ int main (void) {
 		// If the escape key is pressed, the game is quit, otherwise if space is pressed, restart the games
 		while(1) {
 			if (key[KEY_SPACE]) {
+				pocketTriviaMusic->stopMusic();
+				pocketTriviaMusic->stopSoundEffect();
 				break;
 			}
 			if (key[KEY_ESC]) {
+				pocketTriviaMusic->stopMusic();
+				pocketTriviaMusic->stopSoundEffect();
 				doneFlag = 1;
 				break;
 			}
 		}
 
+		// Clear any sounds
 		if (doneFlag) {
 			delete pocketTriviaMusic;
 			allegro_exit();
